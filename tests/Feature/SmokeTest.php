@@ -24,21 +24,19 @@ test('un-prefixed projects route exists', function () {
         ])
         ->get('/projects')
         ->assertOk()
-        ->assertSee('Bilingual portfolio');
+        ->assertSee('Projects');
 });
 
-test('Filament admin login renders', function () {
-    $this->get('/admin/login')->assertOk();
+test('unauthenticated /admin redirects to Fortify login', function () {
+    $this->get('/admin')->assertRedirect('/login');
 });
 
-test('an authenticated user reaches the panel (or the MFA setup redirect)', function () {
+test('an authenticated admin reaches the panel', function () {
     $admin = User::factory()->create();
 
     $response = $this->actingAs($admin)->get('/admin');
 
-    // MFA is required by panel config: a freshly created user is bounced to
-    // /admin/multi-factor-authentication/set-up. Either a 200 (already enrolled)
-    // or a 302 (must enrol now) is a valid pass for this smoke check.
+    // Filament may issue a final 302 to the dashboard; 200 when already there.
     expect($response->status())->toBeIn([200, 302]);
 });
 

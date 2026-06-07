@@ -1,2 +1,11 @@
 User-agent: *
-Disallow:
+Disallow: /admin
+Disallow: /admin/
+Disallow: /horizon
+Disallow: /horizon/
+Disallow: /up
+Disallow: /*/resume/print
+Disallow: /*/resume/download
+Disallow: /*/resume.json
+
+Sitemap: /sitemap.xml

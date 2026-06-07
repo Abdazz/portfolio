@@ -2,11 +2,11 @@
 
 namespace App\Providers\Filament;
 
-use Filament\Auth\MultiFactor\App\AppAuthentication;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
+use Filament\Navigation\NavigationItem;
 use Filament\Pages\Dashboard;
 use Filament\Panel;
 use Filament\PanelProvider;
@@ -28,13 +28,7 @@ class AdminPanelProvider extends PanelProvider
             ->default()
             ->id('admin')
             ->path('admin')
-            ->login()
-            ->passwordReset()
-            ->emailVerification()
-            ->profile()
-            ->multiFactorAuthentication([
-                AppAuthentication::make()->recoverable(),
-            ], isRequired: true)
+            ->login(false)
             // Mirror of --color-brand-* in resources/css/app.css. Change both together when rebranding.
             ->colors([
                 'primary' => Color::Amber,
@@ -48,6 +42,14 @@ class AdminPanelProvider extends PanelProvider
             ->widgets([
                 AccountWidget::class,
                 FilamentInfoWidget::class,
+            ])
+            ->navigationItems([
+                NavigationItem::make('Horizon')
+                    ->url('/horizon')
+                    ->icon('heroicon-o-queue-list')
+                    ->group('System')
+                    ->sort(99)
+                    ->visible(fn () => auth()->check()),
             ])
             ->middleware([
                 EncryptCookies::class,

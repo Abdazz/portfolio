@@ -1,0 +1,515 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "Abdoul-Aziz ZOROM" [ref=e5] [cursor=pointer]:
+        - /url: http://localhost:8090/en
+      - navigation "Main navigation" [ref=e6]:
+        - link "Home" [ref=e7] [cursor=pointer]:
+          - /url: http://localhost:8090/en
+        - link "Projects" [ref=e8] [cursor=pointer]:
+          - /url: http://localhost:8090/en/projects
+        - link "Resume" [ref=e9] [cursor=pointer]:
+          - /url: http://localhost:8090/en/resume
+        - link "Contact" [ref=e10] [cursor=pointer]:
+          - /url: http://localhost:8090/en/contact
+      - generic [ref=e11]:
+        - generic "Switch language" [ref=e12]:
+          - generic [ref=e13]: en
+          - link "fr" [ref=e14] [cursor=pointer]:
+            - /url: http://localhost:8090/fr/cv
+        - button "Toggle theme" [ref=e15]:
+          - img [ref=e16]
+  - main [ref=e18]:
+    - generic [ref=e19]:
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - paragraph [ref=e22]: Resume
+          - heading "Abdoul-Aziz ZOROM" [level=1] [ref=e23]
+          - paragraph [ref=e24]: Senior Full-Stack Developer & AI Expert
+          - generic [ref=e25]:
+            - generic [ref=e26]:
+              - img [ref=e27]
+              - text: abdoulazizzorom@gmail.com
+            - generic [ref=e29]:
+              - img [ref=e30]
+              - text: Karpala, Ouagadougou, Burkina Faso
+        - generic [ref=e33]:
+          - link "Download PDF" [ref=e34] [cursor=pointer]:
+            - /url: http://localhost:8090/en/resume/download
+            - img [ref=e35]
+            - text: Download PDF
+          - link "Export JSON" [ref=e37] [cursor=pointer]:
+            - /url: http://localhost:8090/en/resume/export.json
+      - generic [ref=e40]:
+        - generic [ref=e41]:
+          - generic [ref=e42]: "01"
+          - generic [ref=e43]: —
+          - heading "profile" [level=2] [ref=e44]
+        - paragraph [ref=e45]: Senior Full-Stack Developer and AI Expert with over 8 years of experience building scalable web platforms and intelligent systems. Specialising in Laravel, Livewire, Angular, and modern AI technologies including LangChain, RAG pipelines, and multi-agent orchestration. Currently CTO at YULCOM Technologies, leading national and international digital transformation projects across Burkina Faso and beyond. I blend creativity, precision, and innovation to deliver next-generation digital experiences.
+      - generic [ref=e47]:
+        - generic [ref=e48]:
+          - generic [ref=e49]: "02"
+          - generic [ref=e50]: —
+          - heading "Experience" [level=2] [ref=e51]
+        - generic [ref=e52]:
+          - generic [ref=e53]:
+            - generic [ref=e54]:
+              - generic [ref=e55]: 2024–Present
+              - generic [ref=e56]: Ouagadougou, Burkina Faso
+            - generic [ref=e57]:
+              - generic [ref=e58]:
+                - heading "Chief Technology Officer (CTO)" [level=3] [ref=e59]
+                - generic [ref=e60]: YULCOM Technologies Burkina
+              - paragraph [ref=e61]: Lead the technical direction and full-stack development of large-scale national and international digital transformation projects. Oversee multidisciplinary teams and contribute directly to backend and frontend development using Laravel, Livewire, Spring Boot, Angular, Docker, and CI/CD pipelines to deliver secure, scalable, and high-performance platforms.
+          - generic [ref=e62]:
+            - generic [ref=e63]:
+              - generic [ref=e64]: 2022–Present
+              - generic [ref=e65]: Remote — Netherlands
+            - generic [ref=e66]:
+              - generic [ref=e67]:
+                - heading "Consultant — Full-Stack Developer" [level=3] [ref=e68]
+                - generic [ref=e69]: Class Navigator (Netherlands)
+              - paragraph [ref=e70]: "Engineered an innovative travel planning and booking platform (BidOnMyTrip) allowing travel agents to compete in real time. Built with Laravel, Angular, Docker, OpenAI API, LangChain, and Elasticsearch. URL: https://www.bidonmytrip.com"
+          - generic [ref=e71]:
+            - generic [ref=e72]:
+              - generic [ref=e73]: 2022–2024
+              - generic [ref=e74]: Ouagadougou, Burkina Faso
+            - generic [ref=e75]:
+              - generic [ref=e76]:
+                - heading "Lead Full-Stack Web Developer" [level=3] [ref=e77]
+                - generic [ref=e78]: Yulcom Technologies
+              - paragraph [ref=e79]: Led the design and development of complex web platforms using Laravel, Livewire, Spring Boot, Angular, and modern DevOps tools. Collaborated closely with cross-functional teams to deliver scalable, secure, and high-performance solutions for national and international projects.
+          - generic [ref=e80]:
+            - generic [ref=e81]:
+              - generic [ref=e82]: 2023–2023
+              - generic [ref=e83]: Remote — Netherlands
+            - generic [ref=e84]:
+              - generic [ref=e85]:
+                - heading "Consultant — Full-Stack Developer" [level=3] [ref=e86]
+                - generic [ref=e87]: Class Navigator (Netherlands)
+              - paragraph [ref=e88]: "Designed and implemented a complete and feature-rich school management platform built with the TALL stack (Tailwind CSS, Alpine.js, Laravel, Livewire). URL: http://staging-classnavigator.bytebrew.nl/"
+          - generic [ref=e89]:
+            - generic [ref=e90]:
+              - generic [ref=e91]: 2020–2022
+              - generic [ref=e92]: Ouagadougou, Burkina Faso
+            - generic [ref=e93]:
+              - generic [ref=e94]:
+                - heading "Lead Full-Stack Developer" [level=3] [ref=e95]
+                - generic [ref=e96]: Switch Maker
+              - paragraph [ref=e97]: Led end-to-end development of dynamic web applications, contributing to both backend and frontend layers using Laravel, Vue.js, and Livewire. Designed and implemented scalable architectures, optimised performance, and ensured code quality through best development practices.
+          - generic [ref=e98]:
+            - generic [ref=e99]:
+              - generic [ref=e100]: 2021–2021
+              - generic [ref=e101]: Ouagadougou, Burkina Faso
+            - generic [ref=e102]:
+              - generic [ref=e103]:
+                - heading "Laravel Trainer" [level=3] [ref=e104]
+                - generic [ref=e105]: Switch Maker
+              - paragraph [ref=e106]: Trained over 100 people in Laravel and e-services development techniques within the E-Burkina Project, aimed at extending the virtual counter of Burkina Faso's public administration.
+          - generic [ref=e107]:
+            - generic [ref=e108]:
+              - generic [ref=e109]: 2018–Present
+              - generic [ref=e110]: Ouagadougou, Burkina Faso
+            - generic [ref=e111]:
+              - generic [ref=e112]:
+                - heading "Founder" [level=3] [ref=e113]
+                - generic [ref=e114]: DigiClass
+              - paragraph [ref=e115]: "Founded DigiClass, an online learning platform with the mission of improving academic outcomes for students in Africa through ICT. Tony Elumelu Foundation #TEF 2018 laureate. Website: www.digiclass.co"
+          - generic [ref=e116]:
+            - generic [ref=e117]:
+              - generic [ref=e118]: 2017–2018
+              - generic [ref=e119]: Ouagadougou, Burkina Faso
+            - generic [ref=e120]:
+              - generic [ref=e121]:
+                - heading "Web Developer" [level=3] [ref=e122]
+                - generic [ref=e123]: Switch Maker
+              - paragraph [ref=e124]: "Developed the governmental platform E-Compétences, a directory of IT skills of companies and consultants of Burkina Faso, for the Ministry of Digital Transition. Website: http://www.e-competences.gov.bf/"
+          - generic [ref=e125]:
+            - generic [ref=e126]:
+              - generic [ref=e127]: 2016–2017
+              - generic [ref=e128]: Burkina Faso
+            - generic [ref=e129]:
+              - generic [ref=e130]:
+                - heading "Developer" [level=3] [ref=e131]
+                - generic [ref=e132]: MyStudentWeek
+              - paragraph [ref=e133]: "Member of the development team of MyStudentWeek, winner of POESAM, GenieTIC 2016, and the National Internet Week (NIS) Hackathon 2016. A time management platform for universities and institutes. Website: https://www.mystudentweek.com"
+          - generic [ref=e134]:
+            - generic [ref=e135]:
+              - generic [ref=e136]: 2015–2016
+              - generic [ref=e137]: Nouna, Burkina Faso
+            - generic [ref=e138]:
+              - generic [ref=e139]:
+                - heading "Trainer — MS Office" [level=3] [ref=e140]
+                - generic [ref=e141]: Wel Multi-Services Nouna
+              - paragraph [ref=e142]: Trained over 100 people in MS Office during the National Internet Week (NIS) 2016.
+      - generic [ref=e144]:
+        - generic [ref=e145]:
+          - generic [ref=e146]: "03"
+          - generic [ref=e147]: —
+          - heading "Education" [level=2] [ref=e148]
+        - generic [ref=e149]:
+          - generic [ref=e150]:
+            - generic [ref=e151]: 2014–2017
+            - generic [ref=e152]:
+              - generic [ref=e153]:
+                - heading "Bachelor's Degree in Computer Engineering" [level=3] [ref=e154]
+                - generic [ref=e155]: Network Technologies and Computer Systems
+              - paragraph [ref=e156]: Aube Nouvelle University — Bobo-Dioulasso Campus
+              - paragraph [ref=e157]: Obtained the diploma of engineer of computer work, option network technologies and computer systems.
+          - generic [ref=e158]:
+            - generic [ref=e159]: 2011–2014
+            - generic [ref=e160]:
+              - generic [ref=e161]:
+                - heading "Baccalaureate — Series D" [level=3] [ref=e162]
+                - generic [ref=e163]: Sciences
+              - paragraph [ref=e164]: Lycée Provincial des Banwa
+              - paragraph [ref=e165]: Obtained the baccalaureate diploma, series D (science).
+      - generic [ref=e167]:
+        - generic [ref=e168]:
+          - generic [ref=e169]: "04"
+          - generic [ref=e170]: —
+          - heading "Skills" [level=2] [ref=e171]
+        - generic [ref=e172]:
+          - generic [ref=e173]:
+            - generic [ref=e174]: DevOps & Infrastructure
+            - generic [ref=e175]:
+              - generic [ref=e176]: Docker
+              - generic [ref=e177]: GitHub Actions
+              - generic [ref=e178]: Ansible
+              - generic [ref=e179]: CI/CD
+              - generic [ref=e180]: Linux / Ubuntu
+          - generic [ref=e181]:
+            - generic [ref=e182]: AI & Machine Learning
+            - generic [ref=e183]:
+              - generic [ref=e184]: LangChain
+              - generic [ref=e185]: LangGraph
+              - generic [ref=e186]: LlamaIndex
+              - generic [ref=e187]: RAG Pipelines
+              - generic [ref=e188]: CrewAI
+              - generic [ref=e189]: AutoGen (AG2)
+              - generic [ref=e190]: IBM BeeAI
+              - generic [ref=e191]: OpenAI API
+              - generic [ref=e192]: FAISS / ChromaDB
+              - generic [ref=e193]: Ollama
+              - generic [ref=e194]: Groq API
+          - generic [ref=e195]:
+            - generic [ref=e196]: Backend & Languages
+            - generic [ref=e197]:
+              - generic [ref=e198]: PHP
+              - generic [ref=e199]: Laravel
+              - generic [ref=e200]: Spring Boot
+              - generic [ref=e201]: Java
+              - generic [ref=e202]: Python
+              - generic [ref=e203]: JavaScript
+              - generic [ref=e204]: C
+          - generic [ref=e205]:
+            - generic [ref=e206]: Databases & Search
+            - generic [ref=e207]:
+              - generic [ref=e208]: MySQL
+              - generic [ref=e209]: PostgreSQL
+              - generic [ref=e210]: Elasticsearch
+          - generic [ref=e211]:
+            - generic [ref=e212]: Frontend
+            - generic [ref=e213]:
+              - generic [ref=e214]: Livewire
+              - generic [ref=e215]: Angular
+              - generic [ref=e216]: Vue.js
+              - generic [ref=e217]: React
+              - generic [ref=e218]: Alpine.js
+              - generic [ref=e219]: Tailwind CSS
+              - generic [ref=e220]: HTML & CSS
+      - generic [ref=e222]:
+        - generic [ref=e223]:
+          - generic [ref=e224]: "05"
+          - generic [ref=e225]: —
+          - heading "Certifications" [level=2] [ref=e226]
+        - generic [ref=e227]:
+          - generic [ref=e228]:
+            - generic [ref=e229]: "2026"
+            - generic [ref=e230]:
+              - generic [ref=e231]:
+                - paragraph [ref=e232]: Senior Laravel Developer Certification — Laravel 12
+                - paragraph [ref=e233]: Laravel Certifications
+                - paragraph [ref=e234]: Jan 2026
+              - link "Verify" [ref=e235] [cursor=pointer]:
+                - /url: https://verifier.certificationforlaravel.org/74882ab6-ec3a-4505-9ad8-90ea8ca48592
+          - generic [ref=e236]:
+            - generic [ref=e237]: "2025"
+            - generic [ref=e238]:
+              - generic [ref=e239]:
+                - paragraph [ref=e240]: Building AI Agents and Agentic Workflows (Specialization)
+                - paragraph [ref=e241]: IBM / Coursera
+                - paragraph [ref=e242]: Sep 2025
+              - link "Verify" [ref=e243] [cursor=pointer]:
+                - /url: https://coursera.org/verify/specialization/25UWS5XT1U5W
+          - generic [ref=e244]:
+            - generic [ref=e245]: "2025"
+            - generic [ref=e246]:
+              - generic [ref=e247]:
+                - paragraph [ref=e248]: IBM RAG and Agentic AI Professional Certificate
+                - paragraph [ref=e249]: IBM / Coursera
+                - paragraph [ref=e250]: Sep 2025
+              - link "Verify" [ref=e251] [cursor=pointer]:
+                - /url: https://coursera.org/verify/professional-cert/0TI07UB3R97Z
+          - generic [ref=e252]:
+            - generic [ref=e253]: "2025"
+            - generic [ref=e254]:
+              - generic [ref=e255]:
+                - paragraph [ref=e256]: Agentic AI with LangGraph, CrewAI, AutoGen and BeeAI
+                - paragraph [ref=e257]: IBM / Coursera
+                - paragraph [ref=e258]: Sep 2025
+              - link "Verify" [ref=e259] [cursor=pointer]:
+                - /url: https://coursera.org/verify/4Q48X8P16GRG
+          - generic [ref=e260]:
+            - generic [ref=e261]: "2025"
+            - generic [ref=e262]:
+              - generic [ref=e263]:
+                - paragraph [ref=e264]: Agentic AI with LangChain and LangGraph
+                - paragraph [ref=e265]: IBM / Coursera
+                - paragraph [ref=e266]: Sep 2025
+              - link "Verify" [ref=e267] [cursor=pointer]:
+                - /url: https://coursera.org/verify/8QSNCLSZRCOX
+          - generic [ref=e268]:
+            - generic [ref=e269]: "2025"
+            - generic [ref=e270]:
+              - generic [ref=e271]:
+                - paragraph [ref=e272]: Fundamentals of Building AI Agents
+                - paragraph [ref=e273]: IBM / Coursera
+                - paragraph [ref=e274]: Sep 2025
+              - link "Verify" [ref=e275] [cursor=pointer]:
+                - /url: https://coursera.org/verify/XV8QCC4ZXXZA
+          - generic [ref=e276]:
+            - generic [ref=e277]: "2025"
+            - generic [ref=e278]:
+              - generic [ref=e279]:
+                - paragraph [ref=e280]: Build Multimodal Generative AI Applications
+                - paragraph [ref=e281]: IBM / Coursera
+                - paragraph [ref=e282]: Sep 2025
+              - link "Verify" [ref=e283] [cursor=pointer]:
+                - /url: https://coursera.org/verify/XC1FVA9C7C3S
+          - generic [ref=e284]:
+            - generic [ref=e285]: "2025"
+            - generic [ref=e286]:
+              - generic [ref=e287]:
+                - paragraph [ref=e288]: Getting Started with Spring and Spring Boot for Java
+                - paragraph [ref=e289]: Udemy
+                - paragraph [ref=e290]: Aug 2025
+              - link "Verify" [ref=e291] [cursor=pointer]:
+                - /url: https://ude.my/UC-253ab6b0-c045-4bfa-91b0-af29aa8bb3f6
+          - generic [ref=e292]:
+            - generic [ref=e293]: "2025"
+            - generic [ref=e294]:
+              - generic [ref=e295]:
+                - paragraph [ref=e296]: Advanced RAG with Vector Databases and Retrievers
+                - paragraph [ref=e297]: IBM / Coursera
+                - paragraph [ref=e298]: Aug 2025
+              - link "Verify" [ref=e299] [cursor=pointer]:
+                - /url: https://coursera.org/verify/JD347EJ3C4ZH
+          - generic [ref=e300]:
+            - generic [ref=e301]: "2025"
+            - generic [ref=e302]:
+              - generic [ref=e303]:
+                - paragraph [ref=e304]: "Vector Databases for RAG: An Introduction"
+                - paragraph [ref=e305]: IBM / Coursera
+                - paragraph [ref=e306]: Aug 2025
+              - link "Verify" [ref=e307] [cursor=pointer]:
+                - /url: https://coursera.org/verify/J124NYAVTFAC
+          - generic [ref=e308]:
+            - generic [ref=e309]: "2025"
+            - generic [ref=e310]:
+              - generic [ref=e311]:
+                - paragraph [ref=e312]: RAG for Generative AI Applications (Specialization)
+                - paragraph [ref=e313]: IBM / Coursera
+                - paragraph [ref=e314]: Aug 2025
+              - link "Verify" [ref=e315] [cursor=pointer]:
+                - /url: https://coursera.org/verify/specialization/9B3ND26WFMVJ
+          - generic [ref=e316]:
+            - generic [ref=e317]: "2025"
+            - generic [ref=e318]:
+              - generic [ref=e319]:
+                - paragraph [ref=e320]: "Develop Generative AI Applications: Get Started"
+                - paragraph [ref=e321]: IBM / Coursera
+                - paragraph [ref=e322]: Aug 2025
+              - link "Verify" [ref=e323] [cursor=pointer]:
+                - /url: https://coursera.org/verify/TV4NIIBPB8CN
+          - generic [ref=e324]:
+            - generic [ref=e325]: "2025"
+            - generic [ref=e326]:
+              - generic [ref=e327]:
+                - paragraph [ref=e328]: "Build RAG Applications: Get Started"
+                - paragraph [ref=e329]: IBM / Coursera
+                - paragraph [ref=e330]: Aug 2025
+              - link "Verify" [ref=e331] [cursor=pointer]:
+                - /url: https://coursera.org/verify/4HBSUUNN3UKD
+          - generic [ref=e332]:
+            - generic [ref=e333]: "2025"
+            - generic [ref=e334]:
+              - generic [ref=e335]:
+                - paragraph [ref=e336]: "LLM, LangChain, RAG, Agent: Create Your AI-Powered Apps"
+                - paragraph [ref=e337]: Udemy
+                - paragraph [ref=e338]: Aug 2025
+              - link "Verify" [ref=e339] [cursor=pointer]:
+                - /url: https://ude.my/UC-055e0933-eed9-4515-b5fe-80a65af1a59e
+          - generic [ref=e340]:
+            - generic [ref=e341]: "2025"
+            - generic [ref=e343]:
+              - paragraph [ref=e344]: Develop Web Sites with Java EE
+              - paragraph [ref=e345]: OpenClassrooms
+              - paragraph [ref=e346]: Feb 2025
+          - generic [ref=e347]:
+            - generic [ref=e348]: "2025"
+            - generic [ref=e350]:
+              - paragraph [ref=e351]: Build a Java Application with Spring Boot
+              - paragraph [ref=e352]: OpenClassrooms
+              - paragraph [ref=e353]: Feb 2025
+          - generic [ref=e354]:
+            - generic [ref=e355]: "2025"
+            - generic [ref=e357]:
+              - paragraph [ref=e358]: Organise and Package a Java Application with Apache Maven
+              - paragraph [ref=e359]: OpenClassrooms
+              - paragraph [ref=e360]: Feb 2025
+          - generic [ref=e361]:
+            - generic [ref=e362]: "2025"
+            - generic [ref=e364]:
+              - paragraph [ref=e365]: Learn to Programme in Java
+              - paragraph [ref=e366]: OpenClassrooms
+              - paragraph [ref=e367]: Jan 2025
+          - generic [ref=e368]:
+            - generic [ref=e369]: "2024"
+            - generic [ref=e371]:
+              - paragraph [ref=e372]: Set Up Your Python Environment
+              - paragraph [ref=e373]: OpenClassrooms
+              - paragraph [ref=e374]: May 2024
+          - generic [ref=e375]:
+            - generic [ref=e376]: "2024"
+            - generic [ref=e378]:
+              - paragraph [ref=e379]: Learn the Basics of the Python Language
+              - paragraph [ref=e380]: OpenClassrooms
+              - paragraph [ref=e381]: May 2024
+          - generic [ref=e382]:
+            - generic [ref=e383]: "2023"
+            - generic [ref=e385]:
+              - paragraph [ref=e386]: Master Angular
+              - paragraph [ref=e387]: OpenClassrooms
+              - paragraph [ref=e388]: Jan 2023
+          - generic [ref=e389]:
+            - generic [ref=e390]: "2022"
+            - generic [ref=e392]:
+              - paragraph [ref=e393]: Deepen Your Angular Knowledge
+              - paragraph [ref=e394]: OpenClassrooms
+              - paragraph [ref=e395]: Dec 2022
+          - generic [ref=e396]:
+            - generic [ref=e397]: "2022"
+            - generic [ref=e399]:
+              - paragraph [ref=e400]: Get Started with Angular
+              - paragraph [ref=e401]: OpenClassrooms
+              - paragraph [ref=e402]: Nov 2022
+          - generic [ref=e403]:
+            - generic [ref=e404]: "2022"
+            - generic [ref=e406]:
+              - paragraph [ref=e407]: Get Started with React
+              - paragraph [ref=e408]: OpenClassrooms
+              - paragraph [ref=e409]: Apr 2022
+          - generic [ref=e410]:
+            - generic [ref=e411]: "2020"
+            - generic [ref=e413]:
+              - paragraph [ref=e414]: Founder Institute Programme — Participant
+              - paragraph [ref=e415]: Founder Institute
+              - paragraph [ref=e416]: Nov 2020
+          - generic [ref=e417]:
+            - generic [ref=e418]: "2020"
+            - generic [ref=e420]:
+              - paragraph [ref=e421]: GenieTIC Winner — Young Tech Talent Competition
+              - paragraph [ref=e422]: GenieTIC Burkina Faso
+              - paragraph [ref=e423]: Sep 2020
+          - generic [ref=e424]:
+            - generic [ref=e425]: "2020"
+            - generic [ref=e427]:
+              - paragraph [ref=e428]: Object-Oriented Programming in PHP
+              - paragraph [ref=e429]: OpenClassrooms
+              - paragraph [ref=e430]: Aug 2020
+          - generic [ref=e431]:
+            - generic [ref=e432]: "2020"
+            - generic [ref=e433]:
+              - generic [ref=e434]:
+                - paragraph [ref=e435]: "Ansible Essentials: Simplicity in Automation"
+                - paragraph [ref=e436]: Udemy / Red Hat
+                - paragraph [ref=e437]: Mar 2020
+              - link "Verify" [ref=e438] [cursor=pointer]:
+                - /url: https://ude.my/UC-9fff03e5-bfb2-4dcc-b6b1-1aa2b0c46198
+          - generic [ref=e439]:
+            - generic [ref=e440]: "2020"
+            - generic [ref=e442]:
+              - paragraph [ref=e443]: Optimise Your Deployment by Creating Containers with Docker
+              - paragraph [ref=e444]: OpenClassrooms
+              - paragraph [ref=e445]: Mar 2020
+          - generic [ref=e446]:
+            - generic [ref=e447]: "2020"
+            - generic [ref=e449]:
+              - paragraph [ref=e450]: Keys to Successful Web SEO
+              - paragraph [ref=e451]: OpenClassrooms
+              - paragraph [ref=e452]: Feb 2020
+          - generic [ref=e453]:
+            - generic [ref=e454]: "2020"
+            - generic [ref=e456]:
+              - paragraph [ref=e457]: Use Ansible to Automate Your Configuration Tasks
+              - paragraph [ref=e458]: OpenClassrooms
+              - paragraph [ref=e459]: Feb 2020
+          - generic [ref=e460]:
+            - generic [ref=e461]: "2018"
+            - generic [ref=e463]:
+              - paragraph [ref=e464]: AFIDBA Winner — AFD Inclusive & Digital Business in Africa
+              - paragraph [ref=e465]: AFD (Agence Française de Développement)
+              - paragraph [ref=e466]: Oct 2018
+          - generic [ref=e467]:
+            - generic [ref=e468]: "2018"
+            - generic [ref=e470]:
+              - paragraph [ref=e471]: Certificate in Entrepreneurship Training
+              - paragraph [ref=e472]: Tony Elumelu Foundation
+              - paragraph [ref=e473]: Oct 2018
+          - generic [ref=e474]:
+            - generic [ref=e475]: "2018"
+            - generic [ref=e477]:
+              - paragraph [ref=e478]: POESAM 2018 International Laureate — Special Content Award
+              - paragraph [ref=e479]: POESAM
+              - paragraph [ref=e480]: Sep 2018
+          - generic [ref=e481]:
+            - generic [ref=e482]: "2018"
+            - generic [ref=e484]:
+              - paragraph [ref=e485]: "Tony Elumelu Foundation #TEF Entrepreneurship Programme Winner"
+              - paragraph [ref=e486]: Tony Elumelu Foundation
+              - paragraph [ref=e487]: Mar 2018
+      - generic [ref=e489]:
+        - generic [ref=e490]:
+          - generic [ref=e491]: "06"
+          - generic [ref=e492]: —
+          - heading "Languages" [level=2] [ref=e493]
+        - generic [ref=e494]:
+          - generic [ref=e495]:
+            - generic [ref=e496]: French
+            - generic [ref=e497]: C2
+          - generic [ref=e498]:
+            - generic [ref=e499]: English
+            - generic [ref=e500]: C1
+          - generic [ref=e501]:
+            - generic [ref=e502]: Mooré
+            - generic [ref=e503]: native
+          - generic [ref=e504]:
+            - generic [ref=e505]: Dioula
+            - generic [ref=e506]: B1
+  - contentinfo [ref=e507]:
+    - generic [ref=e509]:
+      - generic [ref=e510]:
+        - paragraph [ref=e511]: Abdoul-Aziz ZOROM
+        - paragraph [ref=e512]: © 2026
+      - navigation "Footer navigation" [ref=e513]:
+        - link "Projects" [ref=e514] [cursor=pointer]:
+          - /url: http://localhost:8090/en/projects
+        - link "Resume" [ref=e515] [cursor=pointer]:
+          - /url: http://localhost:8090/en/resume
+        - link "Contact" [ref=e516] [cursor=pointer]:
+          - /url: http://localhost:8090/en/contact
+        - link "JSON" [ref=e517] [cursor=pointer]:
+          - /url: http://localhost:8090/en/resume/export.json

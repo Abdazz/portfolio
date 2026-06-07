@@ -1,16 +1,22 @@
 # syntax=docker/dockerfile:1.7
-# Dev-oriented PHP-FPM image. Source code is mounted at runtime via docker-compose.
-# A multi-stage production image will be added in Phase 4.
+# Multi-stage build.
+#   --target dev      → dev image: source mounted at runtime, no baked assets
+#   --target runtime  → production image: composer + Vite assets baked in
 
-FROM php:8.4-fpm-alpine
+# ─── shared base ─────────────────────────────────────────────────────────────
+FROM php:8.4-fpm-alpine AS base
 
 ARG WWWUSER=1000
 ARG WWWGROUP=1000
+
+# renovate: datasource=repology depName=alpine_3_21/chromium versioning=loose
+ARG CHROMIUM_VERSION=148.0.7778.178-r0
 
 WORKDIR /var/www/html
 
 RUN apk add --no-cache \
         bash \
+        chromium=${CHROMIUM_VERSION} \
         git \
         icu-data-full \
         icu-dev \
@@ -18,7 +24,10 @@ RUN apk add --no-cache \
         libjpeg-turbo-dev \
         freetype-dev \
         libzip-dev \
+        nodejs \
+        npm \
         oniguruma-dev \
+        postgresql-client \
         postgresql-dev \
         linux-headers \
         $PHPIZE_DEPS \
@@ -42,6 +51,32 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 RUN addgroup -g ${WWWGROUP} -S app \
     && adduser -u ${WWWUSER} -S -G app -s /bin/bash app
+
+# ─── dev ─────────────────────────────────────────────────────────────────────
+FROM base AS dev
+
+# Source is mounted at runtime via docker-compose. Nothing baked in.
+USER app
+EXPOSE 9000
+CMD ["php-fpm"]
+
+# ─── builder (bakes composer deps + Vite assets) ─────────────────────────────
+FROM base AS builder
+
+COPY --chown=app:app . .
+
+USER app
+
+RUN composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
+
+RUN npm ci && npm run build && rm -rf node_modules
+
+# ─── runtime (production PHP-FPM) ────────────────────────────────────────────
+FROM base AS runtime
+
+COPY --chown=app:app --from=builder /var/www/html /var/www/html
+
+COPY docker/php/opcache.ini /usr/local/etc/php/conf.d/opcache.ini
 
 USER app
 
