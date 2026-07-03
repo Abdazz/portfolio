@@ -24,6 +24,7 @@ class SiteSetting extends Model implements HasMedia
         'twitter_handle',
         'social_links',
         'resume_template',
+        'home_layout',
         'contact_email',
     ];
 
@@ -57,6 +58,7 @@ class SiteSetting extends Model implements HasMedia
             'meta_description' => ['en' => '', 'fr' => ''],
             'social_links' => [],
             'resume_template' => 'default',
+            'home_layout' => 'gerold-01',
         ]);
     }
 }
