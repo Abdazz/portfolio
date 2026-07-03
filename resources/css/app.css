@@ -13,12 +13,14 @@
 @theme {
     --font-sans: 'Sora', ui-sans-serif, system-ui, sans-serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+    --font-display: 'Sora', ui-serif, Georgia, serif;
 
     /* Gerold purple accent */
     --color-accent: #8750f7;
     --color-accent-2: #9b8dff;
     --color-accent-deep: #2a1454;
     --color-green: #00ff2f;
+    --color-accent-content: #6d3fd4;
 
     /* Light (cream) base */
     --color-surface: #f6f3fc;
@@ -38,6 +40,7 @@
         --color-text-muted: #7a7a7a;
         --color-border: #ffffff24;
         --color-accent-foreground: #ffffff;
+        --color-accent-content: #9b8dff;
     }
 }
 
