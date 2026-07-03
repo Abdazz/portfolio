@@ -6,12 +6,22 @@ gsap.registerPlugin(ScrollTrigger);
 
 const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+let lenis = null;
+let rafId = null;
+
 function initMotion() {
     if (reduced) return;
 
-    const lenis = new Lenis({ duration: 1.1, smoothWheel: true });
-    function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
-    requestAnimationFrame(raf);
+    // Tear down a previous run (Livewire re-navigation) before re-initialising.
+    if (lenis) {
+        lenis.destroy?.();
+        if (rafId) cancelAnimationFrame(rafId);
+        ScrollTrigger.getAll().forEach((t) => t.kill());
+    }
+
+    lenis = new Lenis({ duration: 1.1, smoothWheel: true });
+    function raf(time) { lenis.raf(time); rafId = requestAnimationFrame(raf); }
+    rafId = requestAnimationFrame(raf);
     lenis.on('scroll', ScrollTrigger.update);
 
     document.querySelectorAll('[data-reveal]').forEach((el) => {
