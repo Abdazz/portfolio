@@ -25,6 +25,7 @@
     /* Light (cream) base */
     --color-surface: #f6f3fc;
     --color-surface-muted: #ece6f7;
+    --color-surface-deep: #efe8f7;
     --color-text: #0f0715;
     --color-text-muted: #5a5170;
     --color-border: #e2dbf0;
@@ -46,6 +47,7 @@
 
 @layer base {
     html { color-scheme: dark; }
+    html:not(.dark) { color-scheme: light; }
     body { background: var(--color-surface); color: var(--color-text); font-family: var(--font-sans); }
     *, ::after, ::before { border-color: var(--color-border); }
 }
