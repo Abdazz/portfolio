@@ -27,3 +27,6 @@ yarn-error.log
 /.local
 /.playwright-mcp
 /*.png
+
+# Pest browser test screenshots (ephemeral)
+tests/Browser/Screenshots/
