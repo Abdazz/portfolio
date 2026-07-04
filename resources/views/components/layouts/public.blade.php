@@ -20,6 +20,13 @@
     $settings = SiteSetting::instance();
     $resolvedOgImage = $ogImage ?? $settings->ogImageUrl($locale);
     $twitterHandle   = $settings->twitter_handle;
+
+    $navItems = [
+        ['route' => 'home', 'active' => 'home', 'label' => __('nav.home')],
+        ['route' => 'projects.index', 'active' => 'projects.*', 'label' => __('nav.projects')],
+        ['route' => 'resume', 'active' => 'resume*', 'label' => __('nav.resume')],
+        ['route' => 'contact', 'active' => 'contact', 'label' => __('nav.contact')],
+    ];
 @endphp
 
 <!DOCTYPE html>
@@ -86,67 +93,75 @@
 </head>
 <body class="min-h-dvh bg-surface text-text antialiased font-sans selection:bg-accent/20 selection:text-accent">
 
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-accent focus:text-accent-foreground">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:m-4 focus:rounded-full focus:px-5 focus:py-3 focus:gradient-primary focus:text-white">
         {{ __('Skip to content') }}
     </a>
 
     <header
-        x-data="{ open: false, scrolled: false }"
-        @scroll.window="scrolled = window.scrollY > 30"
-        class="sticky top-0 z-40 transition-all duration-300"
-        :class="scrolled ? 'bg-surface/90 backdrop-blur-md border-b border-border/50 shadow-sm' : 'bg-transparent'"
+        x-data="{ open: false, atTop: true, hidden: false, lastY: 0 }"
+        x-init="lastY = window.scrollY"
+        @scroll.window="
+            const y = window.scrollY;
+            atTop = y < 30;
+            hidden = !open && y > lastY && y > 240;
+            lastY = y;
+        "
+        class="sticky top-0 z-40 transition-transform duration-500"
+        :class="hidden ? '-translate-y-full' : 'translate-y-0'"
     >
-        <div class="mx-auto flex max-w-5xl items-center justify-between gap-4 px-6 py-4">
+        <div
+            class="border-b transition-colors duration-300"
+            :class="atTop && !open ? 'border-transparent bg-transparent' : 'border-border/60 bg-surface/85 backdrop-blur-lg'"
+        >
+            <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-5 lg:px-8">
 
-            <a href="{{ route('home') }}" class="font-display text-sm font-semibold tracking-wider text-text hover:text-accent transition-colors" style="font-optical-sizing: auto;">
-                {{ config('app.name') }}
-            </a>
-
-            <nav aria-label="{{ __('nav.aria') }}" class="hidden items-center gap-7 sm:flex">
-                <a href="{{ route('home') }}"
-                   class="text-xs font-semibold uppercase tracking-widest transition-colors {{ request()->routeIs('home') ? 'text-accent' : 'text-text-muted hover:text-text' }}">
-                    {{ __('nav.home') }}
+                <a href="{{ route('home') }}" class="text-lg font-semibold tracking-tight text-text transition-colors hover:text-accent-content">
+                    {{ config('app.name') }}<span class="text-accent">.</span>
                 </a>
-                <a href="{{ route('projects.index') }}"
-                   class="text-xs font-semibold uppercase tracking-widest transition-colors {{ request()->routeIs('projects.*') ? 'text-accent' : 'text-text-muted hover:text-text' }}">
-                    {{ __('nav.projects') }}
-                </a>
-                <a href="{{ route('resume') }}"
-                   class="text-xs font-semibold uppercase tracking-widest transition-colors {{ request()->routeIs('resume*') ? 'text-accent' : 'text-text-muted hover:text-text' }}">
-                    {{ __('nav.resume') }}
-                </a>
-                <a href="{{ route('contact') }}"
-                   class="text-xs font-semibold uppercase tracking-widest transition-colors {{ request()->routeIs('contact') ? 'text-accent' : 'text-text-muted hover:text-text' }}">
-                    {{ __('nav.contact') }}
-                </a>
-            </nav>
 
-            <div class="flex items-center gap-3">
-                <x-molecules.language-switcher />
+                <nav aria-label="{{ __('nav.aria') }}" class="hidden items-center gap-9 md:flex">
+                    @foreach ($navItems as $item)
+                        <a href="{{ route($item['route']) }}"
+                           @if (request()->routeIs($item['active'])) aria-current="page" @endif
+                           class="text-sm font-medium transition-colors {{ request()->routeIs($item['active']) ? 'text-accent-content' : 'text-text-muted hover:text-text' }}">
+                            {{ $item['label'] }}
+                        </a>
+                    @endforeach
+                </nav>
 
-                <button
-                    type="button"
-                    aria-label="{{ __('nav.toggle_theme') }}"
-                    x-data
-                    @click="
-                        const html = document.documentElement;
-                        const isDark = html.classList.toggle('dark');
-                        document.cookie = 'theme=' + (isDark ? 'dark' : 'light') + '; path=/; max-age=31536000; SameSite=Lax';
-                    "
-                    class="rounded p-1.5 text-text-muted hover:text-accent transition-colors"
-                >
-                    <flux:icon name="sun" class="size-4 dark:hidden" />
-                    <flux:icon name="moon" class="size-4 hidden dark:block" />
-                </button>
+                <div class="flex items-center gap-2">
+                    <x-molecules.language-switcher />
 
-                <button
-                    type="button"
-                    aria-label="{{ __('nav.aria') }}"
-                    @click="open = !open"
-                    class="sm:hidden rounded p-1.5 text-text-muted hover:text-accent transition-colors"
-                >
-                    <flux:icon name="bars-3" class="size-5" />
-                </button>
+                    <button
+                        type="button"
+                        aria-label="{{ __('nav.toggle_theme') }}"
+                        x-data
+                        @click="
+                            const html = document.documentElement;
+                            const isDark = html.classList.toggle('dark');
+                            document.cookie = 'theme=' + (isDark ? 'dark' : 'light') + '; path=/; max-age=31536000; SameSite=Lax';
+                        "
+                        class="rounded-full p-2 text-text-muted transition-colors hover:bg-surface-muted hover:text-accent-content"
+                    >
+                        <flux:icon name="sun" class="size-4 dark:hidden" />
+                        <flux:icon name="moon" class="hidden size-4 dark:block" />
+                    </button>
+
+                    <a href="{{ route('contact') }}" class="hidden lg:inline-flex">
+                        <x-atoms.button variant="primary" size="sm">{{ __('nav.contact') }}</x-atoms.button>
+                    </a>
+
+                    <button
+                        type="button"
+                        aria-label="{{ __('nav.aria') }}"
+                        :aria-expanded="open.toString()"
+                        @click="open = !open"
+                        class="rounded-full p-2 text-text-muted transition-colors hover:bg-surface-muted hover:text-accent-content md:hidden"
+                    >
+                        <flux:icon name="bars-3" class="size-5" x-show="!open" />
+                        <flux:icon name="x-mark" class="size-5" x-show="open" x-cloak />
+                    </button>
+                </div>
             </div>
         </div>
 
@@ -154,45 +169,51 @@
             x-show="open"
             x-cloak
             x-transition:enter="transition ease-out duration-200"
-            x-transition:enter-start="opacity-0 -translate-y-1"
+            x-transition:enter-start="opacity-0 -translate-y-2"
             x-transition:enter-end="opacity-100 translate-y-0"
             x-transition:leave="transition ease-in duration-150"
             x-transition:leave-start="opacity-100 translate-y-0"
-            x-transition:leave-end="opacity-0 -translate-y-1"
-            class="sm:hidden border-t border-border bg-surface px-6 py-5 space-y-4"
+            x-transition:leave-end="opacity-0 -translate-y-2"
+            class="space-y-1 border-b border-border bg-surface px-6 py-4 md:hidden"
         >
-            <a href="{{ route('home') }}" class="block text-xs font-semibold uppercase tracking-widest {{ request()->routeIs('home') ? 'text-accent' : 'text-text-muted hover:text-text' }} transition-colors">
-                {{ __('nav.home') }}
-            </a>
-            <a href="{{ route('projects.index') }}" class="block text-xs font-semibold uppercase tracking-widest {{ request()->routeIs('projects.*') ? 'text-accent' : 'text-text-muted hover:text-text' }} transition-colors">
-                {{ __('nav.projects') }}
-            </a>
-            <a href="{{ route('resume') }}" class="block text-xs font-semibold uppercase tracking-widest {{ request()->routeIs('resume*') ? 'text-accent' : 'text-text-muted hover:text-text' }} transition-colors">
-                {{ __('nav.resume') }}
-            </a>
-            <a href="{{ route('contact') }}" class="block text-xs font-semibold uppercase tracking-widest {{ request()->routeIs('contact') ? 'text-accent' : 'text-text-muted hover:text-text' }} transition-colors">
-                {{ __('nav.contact') }}
-            </a>
+            @foreach ($navItems as $item)
+                <a href="{{ route($item['route']) }}"
+                   @click="open = false"
+                   class="block rounded-xl px-4 py-3 text-base font-medium transition-colors {{ request()->routeIs($item['active']) ? 'bg-surface-muted text-accent-content' : 'text-text-muted hover:bg-surface-muted hover:text-text' }}">
+                    {{ $item['label'] }}
+                </a>
+            @endforeach
         </div>
     </header>
 
-    <main id="main-content" class="mx-auto max-w-5xl px-6 py-12">
+    <main id="main-content">
         {{ $slot }}
     </main>
 
-    <footer class="mt-20 border-t border-border/50">
-        <div class="mx-auto max-w-5xl px-6 py-10">
-            <div class="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
-                <div>
-                    <p class="font-display text-base font-semibold text-text" style="font-optical-sizing: auto;">{{ config('app.name') }}</p>
-                    <p class="mt-1 text-xs uppercase tracking-widest text-text-muted">&copy; {{ now()->year }}</p>
+    <footer class="border-t border-border/60 bg-surface-deep/40">
+        <div class="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+            <div class="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
+                <div class="max-w-sm">
+                    <a href="{{ route('home') }}" class="text-xl font-semibold tracking-tight text-text">
+                        {{ config('app.name') }}<span class="text-accent">.</span>
+                    </a>
+                    @if (filled($settings->contact_email))
+                        <a href="mailto:{{ $settings->contact_email }}" class="mt-3 block text-sm text-text-muted transition-colors hover:text-accent-content">
+                            {{ $settings->contact_email }}
+                        </a>
+                    @endif
                 </div>
-                <nav aria-label="{{ __('Footer navigation') }}" class="flex flex-wrap items-center gap-6">
-                    <a href="{{ route('projects.index') }}" class="text-xs font-semibold uppercase tracking-widest text-text-muted hover:text-accent transition-colors">{{ __('nav.projects') }}</a>
-                    <a href="{{ route('resume') }}" class="text-xs font-semibold uppercase tracking-widest text-text-muted hover:text-accent transition-colors">{{ __('nav.resume') }}</a>
-                    <a href="{{ route('contact') }}" class="text-xs font-semibold uppercase tracking-widest text-text-muted hover:text-accent transition-colors">{{ __('nav.contact') }}</a>
-                    <a href="{{ route('resume.json') }}" class="text-xs font-semibold uppercase tracking-widest text-text-muted hover:text-accent transition-colors">JSON</a>
+
+                <nav aria-label="{{ __('Footer navigation') }}" class="flex flex-wrap gap-x-8 gap-y-3">
+                    @foreach ($navItems as $item)
+                        <a href="{{ route($item['route']) }}" class="text-sm font-medium text-text-muted transition-colors hover:text-accent-content">{{ $item['label'] }}</a>
+                    @endforeach
+                    <a href="{{ route('resume.json') }}" class="text-sm font-medium text-text-muted transition-colors hover:text-accent-content">JSON</a>
                 </nav>
+            </div>
+
+            <div class="mt-12 border-t border-border/60 pt-8">
+                <p class="text-xs text-text-muted">&copy; {{ now()->year }} {{ config('app.name') }}. {{ __('All rights reserved.') }}</p>
             </div>
         </div>
     </footer>
