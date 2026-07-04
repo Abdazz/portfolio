@@ -1,7 +1,7 @@
 @props(['href', 'external' => false])
 
 @php
-    $attrs = ['href' => $href, 'class' => 'text-accent hover:text-accent-content underline underline-offset-4 decoration-accent/40 hover:decoration-accent-content transition-colors'];
+    $attrs = ['href' => $href, 'class' => 'font-medium text-accent-content underline decoration-accent/30 decoration-1 underline-offset-4 transition-colors duration-300 hover:text-accent hover:decoration-accent'];
     if ($external) {
         $attrs['target'] = '_blank';
         $attrs['rel'] = 'noopener noreferrer';
