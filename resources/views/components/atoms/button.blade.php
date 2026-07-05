@@ -27,14 +27,14 @@
     <a {{ $attributes->merge(array_merge(['href' => $href, 'class' => $classes], $extraAttrs)) }}>
         {{ $slot }}
         @if ($icon)
-            <flux:icon :name="$icon" class="size-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+            <flux:icon :name="$icon" variant="outline" class="size-4 transition-transform duration-300 group-hover:translate-x-0.5" />
         @endif
     </a>
 @else
     <button {{ $attributes->merge(['type' => 'button', 'class' => $classes]) }}>
         {{ $slot }}
         @if ($icon)
-            <flux:icon :name="$icon" class="size-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+            <flux:icon :name="$icon" variant="outline" class="size-4 transition-transform duration-300 group-hover:translate-x-0.5" />
         @endif
     </button>
 @endif
