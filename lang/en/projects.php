@@ -14,4 +14,5 @@ return [
     'tech_stack' => 'Tech stack',
     'links' => 'Links',
     'back' => 'Back to projects',
+    'gallery' => 'Gallery',
 ];
