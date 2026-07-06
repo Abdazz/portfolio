@@ -2,8 +2,11 @@
 
 return [
     'title' => 'Resume',
+    'profile' => 'Profile',
     'download' => 'Download PDF',
     'export_json' => 'Export JSON',
+    'print' => 'Print version',
+    'verify' => 'Verify',
     'experience' => 'Experience',
     'education' => 'Education',
     'skills' => 'Skills',

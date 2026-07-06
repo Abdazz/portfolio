@@ -2,8 +2,11 @@
 
 return [
     'title' => 'CV',
+    'profile' => 'Profil',
     'download' => 'Télécharger en PDF',
     'export_json' => 'Exporter JSON',
+    'print' => 'Version imprimable',
+    'verify' => 'Vérifier',
     'experience' => 'Expérience',
     'education' => 'Formation',
     'skills' => 'Compétences',
