@@ -7,9 +7,7 @@
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between" data-reveal>
                 <x-molecules.section-heading :eyebrow="__('home.portfolio_eyebrow')" :title="__('home.portfolio_title')" />
-                <a href="{{ route('projects.index') }}" class="shrink-0">
-                    <x-atoms.button variant="outline" size="sm" icon="arrow-up-right">{{ __('home.featured_more') }}</x-atoms.button>
-                </a>
+                <x-atoms.button href="{{ route('projects.index') }}" variant="outline" size="sm" icon="arrow-up-right" class="shrink-0">{{ __('home.featured_more') }}</x-atoms.button>
             </div>
 
             <div class="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">

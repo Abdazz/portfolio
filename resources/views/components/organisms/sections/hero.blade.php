@@ -5,7 +5,12 @@
     $headline = $profile?->getTranslation('headline', $locale) ?: __('home.hero_eyebrow');
     $bio = $profile?->getTranslation('bio', $locale) ?: __('home.hero_lead');
     $avatar = $profile?->getFirstMediaUrl('avatar') ?: null;
-    $socials = collect($profile?->social_links ?? [])->filter(fn ($s) => filled($s['url'] ?? null));
+    $socials = collect($profile?->social_links ?? [])
+        ->map(fn ($value, $key) => is_array($value)
+            ? ['label' => $value['label'] ?? ucfirst((string) $key), 'url' => $value['url'] ?? null]
+            : ['label' => ucfirst((string) $key), 'url' => $value])
+        ->filter(fn ($s) => filled($s['url']))
+        ->values();
 @endphp
 
 <section class="relative overflow-hidden pt-16 pb-20 md:pt-24 md:pb-28 lg:pt-28 lg:pb-32">

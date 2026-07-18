@@ -14,6 +14,17 @@ it('renders the hero with the profile name', function () {
     expect($html)->toContain('Ada Lovelace');
 });
 
+it('renders hero social links stored as a platform=>url map', function () {
+    $profile = Profile::factory()->create([
+        'social_links' => ['linkedin' => 'https://linkedin.com/in/ada', 'github' => 'https://github.com/ada'],
+    ]);
+    $html = Blade::render('<x-organisms.sections.hero :profile="$profile" />', ['profile' => $profile]);
+
+    expect($html)
+        ->toContain('https://linkedin.com/in/ada')
+        ->toContain('https://github.com/ada');
+});
+
 it('renders the about section with a stat value', function () {
     $profile = Profile::factory()->create();
     $html = Blade::render(

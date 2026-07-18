@@ -147,9 +147,7 @@
                         <flux:icon name="moon" class="hidden size-4 dark:block" />
                     </button>
 
-                    <a href="{{ route('contact') }}" class="hidden lg:inline-flex">
-                        <x-atoms.button variant="primary" size="sm">{{ __('nav.contact') }}</x-atoms.button>
-                    </a>
+                    <x-atoms.button href="{{ route('contact') }}" variant="primary" size="sm" class="hidden lg:inline-flex">{{ __('nav.contact') }}</x-atoms.button>
 
                     <button
                         type="button"
