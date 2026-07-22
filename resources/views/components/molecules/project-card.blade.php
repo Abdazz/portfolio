@@ -21,9 +21,10 @@
             height="600"
         >
     @else
-        <div class="relative flex aspect-[4/3] w-full items-center justify-center overflow-hidden rounded-t-[10px]">
+        <div class="relative flex aspect-[4/3] w-full flex-col items-center justify-center gap-3 overflow-hidden rounded-t-[10px] px-4">
             <div class="absolute inset-0 gradient-primary opacity-25"></div>
             <span class="gradient-text select-none text-7xl font-bold">{{ $num }}</span>
+            <span class="relative text-center text-xl font-semibold text-text md:text-2xl">{{ $title }}</span>
         </div>
     @endif
 
