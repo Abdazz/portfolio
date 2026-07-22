@@ -7,7 +7,7 @@
 
             <div class="relative flex flex-col items-start gap-8 lg:flex-row lg:items-center lg:justify-between">
                 <div class="flex max-w-2xl flex-col gap-4">
-                    <x-molecules.section-heading :eyebrow="__('home.resume_eyebrow')" :title="__('home.resume_title')" />
+                    <x-molecules.section-heading :title="__('home.resume_title')" align="left" />
                     <p class="text-lg leading-relaxed text-text-muted">{{ __('home.resume_lead') }}</p>
                 </div>
 

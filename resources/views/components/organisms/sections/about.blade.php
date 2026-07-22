@@ -15,7 +15,7 @@
 <section class="py-20 md:py-28 lg:py-32">
     <div class="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2 lg:gap-20 lg:px-8">
         <div class="flex flex-col gap-6">
-            <x-molecules.section-heading :eyebrow="__('home.about_eyebrow')" :title="__('home.about_title')" />
+            <x-molecules.section-heading :title="__('home.about_title')" align="left" />
             @if ($bio)
                 <p class="text-lg leading-relaxed text-text-muted" data-reveal>{{ $bio }}</p>
             @endif
