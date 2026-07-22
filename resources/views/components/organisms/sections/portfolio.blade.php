@@ -14,6 +14,13 @@
                     <x-molecules.project-card :project="$project" :index="$i" />
                 @endforeach
             </div>
+
+            <div class="mt-10 flex justify-center md:mt-[50px]" data-reveal>
+                <a href="{{ route('projects.index') }}"
+                   class="rounded-full gradient-secondary px-[35px] py-[17px] text-[15px] font-bold capitalize leading-none text-white transition-all duration-300 hover:[background-position:-100%_0]">
+                    {{ __('home.featured_more') }}
+                </a>
+            </div>
         </div>
     </section>
 @endif

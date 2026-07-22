@@ -10,7 +10,7 @@ return [
     'cta_projects' => 'Voir mes projets',
     'cta_resume' => 'Télécharger le CV',
     'featured_title' => 'Projets en vedette',
-    'featured_more' => 'Voir tous les projets',
+    'featured_more' => 'Voir plus',
 
     // Stats
     'stat_projects' => 'Projets livrés',

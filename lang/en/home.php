@@ -10,7 +10,7 @@ return [
     'cta_projects' => 'View my projects',
     'cta_resume' => 'Download resume',
     'featured_title' => 'Featured Projects',
-    'featured_more' => 'See all projects',
+    'featured_more' => 'See more',
 
     // Stats
     'stat_projects' => 'Projects shipped',

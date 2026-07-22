@@ -10,7 +10,7 @@
 @endphp
 
 {{-- Gerold portfolio card: padded frame, image, gradient overlay slides up on hover/focus --}}
-<article class="group relative overflow-hidden rounded-[10px] bg-surface-muted px-[15px] pt-[25px] lg:p-9 lg:pb-0" data-reveal>
+<article class="group relative overflow-hidden rounded-[10px] border border-border bg-surface-muted px-[15px] pt-[25px] transition-colors duration-300 hover:border-accent/60 lg:p-9 lg:pb-0" data-reveal>
     @if ($cover)
         <img
             src="{{ $cover->getUrl() }}"
@@ -22,8 +22,8 @@
         >
     @else
         <div class="relative flex aspect-[4/3] w-full items-center justify-center overflow-hidden rounded-t-[10px]">
-            <div class="absolute inset-0 gradient-primary opacity-[0.12]"></div>
-            <span class="select-none text-6xl font-semibold text-accent/25">{{ $num }}</span>
+            <div class="absolute inset-0 gradient-primary opacity-25"></div>
+            <span class="gradient-text select-none text-7xl font-bold">{{ $num }}</span>
         </div>
     @endif
 
