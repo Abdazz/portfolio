@@ -14,29 +14,13 @@
         <x-atoms.json-ld type="CreativeWork" :project="$project" />
     </x-slot:head>
 
+    <x-molecules.page-breadcrumb :title="$title" />
+
     <article class="py-16 md:py-24">
         <div class="mx-auto max-w-4xl px-6 lg:px-8">
 
-            {{-- Back + breadcrumb --}}
-            <div data-reveal>
-                <x-molecules.breadcrumb :items="[
-                    ['label' => __('nav.home'), 'href' => route('home')],
-                    ['label' => __('nav.projects'), 'href' => route('projects.index')],
-                    ['label' => $title],
-                ]" />
-            </div>
-
             {{-- Header --}}
-            <header class="mt-8 flex flex-col gap-6" data-reveal>
-                <span class="inline-flex items-center gap-2.5 text-sm font-medium uppercase tracking-[0.2em] text-accent-content">
-                    <span class="h-px w-8 bg-accent/50" aria-hidden="true"></span>
-                    {{ __('nav.projects') }}
-                </span>
-
-                <h1 class="gradient-text text-4xl font-semibold leading-[1.1] md:text-5xl lg:text-6xl">
-                    {{ $title }}
-                </h1>
-
+            <header class="flex flex-col gap-6" data-reveal>
                 @if ($summary)
                     <p class="max-w-2xl text-lg leading-relaxed text-text-muted">{{ $summary }}</p>
                 @endif

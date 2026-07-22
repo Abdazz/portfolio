@@ -4,6 +4,8 @@
 
 <x-layouts.public :title="__('resume.title')">
 
+    <x-molecules.page-breadcrumb :title="__('resume.title')" />
+
     <section class="py-16 md:py-24">
         <div class="mx-auto max-w-4xl px-6 lg:px-8">
 
@@ -12,13 +14,9 @@
                 {{-- Header --}}
                 <div class="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between" data-reveal>
                     <div class="flex flex-col gap-4">
-                        <span class="inline-flex items-center gap-2.5 text-sm font-medium uppercase tracking-[0.2em] text-accent-content">
-                            <span class="h-px w-8 bg-accent/50" aria-hidden="true"></span>
-                            {{ __('resume.title') }}
-                        </span>
-                        <h1 class="gradient-text text-4xl font-semibold leading-[1.05] md:text-5xl lg:text-6xl">
+                        <h2 class="gradient-text text-4xl font-semibold leading-[1.05] md:text-5xl lg:text-6xl">
                             {{ $profile?->full_name ?? config('app.name') }}
-                        </h1>
+                        </h2>
                         @if ($profile)
                             <p class="text-base text-text-muted">
                                 {{ $profile->getTranslation('headline', $locale) }}
