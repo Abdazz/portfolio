@@ -2,10 +2,10 @@
 
 use Illuminate\Support\Facades\Blade;
 
-it('renders a section heading with eyebrow and title', function () {
-    $html = Blade::render('<x-molecules.section-heading eyebrow="Work" title="Selected Projects" />');
+it('renders a section heading with a gradient title and lead', function () {
+    $html = Blade::render('<x-molecules.section-heading title="Selected Projects">A short lead.</x-molecules.section-heading>');
 
-    expect($html)->toContain('Work')->toContain('Selected Projects');
+    expect($html)->toContain('Selected Projects')->toContain('gradient-text')->toContain('A short lead.');
 });
 
 it('renders a stat counter with its target value and label', function () {
