@@ -113,20 +113,35 @@
             class="border-b transition-colors duration-300"
             :class="atTop && !open ? 'border-transparent bg-transparent' : 'border-border/60 bg-surface/85 backdrop-blur-lg'"
         >
-            <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-5 lg:px-8">
+            <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4 lg:px-8 xl:py-5">
 
-                <a href="{{ route('home') }}" class="text-lg font-semibold tracking-tight text-text transition-colors hover:text-accent-content">
-                    {{ config('app.name') }}<span class="text-accent">.</span>
-                </a>
-
-                <nav aria-label="{{ __('nav.aria') }}" class="hidden items-center gap-9 md:flex">
-                    @foreach ($navItems as $item)
-                        <a href="{{ route($item['route']) }}"
-                           @if (request()->routeIs($item['active'])) aria-current="page" @endif
-                           class="text-sm font-medium transition-colors {{ request()->routeIs($item['active']) ? 'text-accent-content' : 'text-text-muted hover:text-text' }}">
-                            {{ $item['label'] }}
+                <ul class="flex items-center gap-x-[15px] xl:gap-x-[35px]">
+                    <li class="leading-none">
+                        <a href="{{ route('home') }}" class="text-lg font-semibold tracking-tight text-text transition-colors hover:text-accent-content">
+                            {{ config('app.name') }}<span class="text-accent">.</span>
                         </a>
-                    @endforeach
+                    </li>
+                    @if (filled($settings->contact_email))
+                        <li class="hidden md:block">
+                            <a href="mailto:{{ $settings->contact_email }}" class="text-[15px] font-medium text-accent-deep dark:text-white">
+                                {{ $settings->contact_email }}
+                            </a>
+                        </li>
+                    @endif
+                </ul>
+
+                <nav aria-label="{{ __('nav.aria') }}" class="hidden items-center md:flex">
+                    <ul class="flex items-center gap-x-5 xl:gap-x-[30px]">
+                        @foreach ($navItems as $item)
+                            <li class="group relative">
+                                <a href="{{ route($item['route']) }}"
+                                   @if (request()->routeIs($item['active'])) aria-current="page" @endif
+                                   class="relative z-0 py-[10px] text-[15px] font-medium capitalize text-accent-deep after:absolute after:bottom-0 after:right-0 after:h-0.5 after:gradient-primary after:transition-all after:duration-500 group-hover:after:left-0 group-hover:after:w-full dark:text-white {{ request()->routeIs($item['active']) ? 'after:left-0 after:w-full' : 'after:w-0' }}">
+                                    {{ $item['label'] }}
+                                </a>
+                            </li>
+                        @endforeach
+                    </ul>
                 </nav>
 
                 <div class="flex items-center gap-2">
@@ -147,7 +162,10 @@
                         <flux:icon name="moon" class="hidden size-4 dark:block" />
                     </button>
 
-                    <x-atoms.button href="{{ route('contact') }}" variant="primary" size="sm" class="hidden lg:inline-flex">{{ __('nav.contact') }}</x-atoms.button>
+                    <a href="{{ route('contact') }}"
+                       class="ml-[10px] hidden rounded-full gradient-secondary px-[35px] py-[17px] text-[15px] font-bold capitalize leading-none text-white transition-all duration-300 hover:[background-position:-100%_0] lg:inline-block">
+                        {{ __('nav.hire_me') }}
+                    </a>
 
                     <button
                         type="button"
@@ -188,30 +206,36 @@
         {{ $slot }}
     </main>
 
-    <footer class="border-t border-border/60 bg-surface-deep/40">
-        <div class="mx-auto max-w-7xl px-6 py-16 lg:px-8">
-            <div class="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
-                <div class="max-w-sm">
-                    <a href="{{ route('home') }}" class="text-xl font-semibold tracking-tight text-text">
-                        {{ config('app.name') }}<span class="text-accent">.</span>
-                    </a>
-                    @if (filled($settings->contact_email))
-                        <a href="mailto:{{ $settings->contact_email }}" class="mt-3 block text-sm text-text-muted transition-colors hover:text-accent-content">
-                            {{ $settings->contact_email }}
-                        </a>
-                    @endif
-                </div>
+    <footer class="bg-accent-deep dark:bg-surface">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="flex flex-col items-center pt-[50px] pb-5 md:pt-[60px]">
+                <a href="{{ route('home') }}" class="mb-6 text-2xl font-semibold tracking-tight text-white">
+                    {{ config('app.name') }}<span class="text-accent">.</span>
+                </a>
 
-                <nav aria-label="{{ __('Footer navigation') }}" class="flex flex-wrap gap-x-8 gap-y-3">
-                    @foreach ($navItems as $item)
-                        <a href="{{ route($item['route']) }}" class="text-sm font-medium text-text-muted transition-colors hover:text-accent-content">{{ $item['label'] }}</a>
-                    @endforeach
-                    <a href="{{ route('resume.json') }}" class="text-sm font-medium text-text-muted transition-colors hover:text-accent-content">JSON</a>
+                <nav aria-label="{{ __('Footer navigation') }}">
+                    <ul class="flex flex-wrap items-center justify-center gap-x-[35px]">
+                        @foreach ($navItems as $item)
+                            <li class="group relative">
+                                <a href="{{ route($item['route']) }}"
+                                   class="relative z-0 inline-block py-[10px] text-[15px] font-medium capitalize text-white after:absolute after:bottom-[5px] after:right-0 after:h-0.5 after:w-0 after:gradient-primary after:transition-all after:duration-500 group-hover:after:left-0 group-hover:after:w-full md:py-[15px]">
+                                    {{ $item['label'] }}
+                                </a>
+                            </li>
+                        @endforeach
+                        <li class="group relative">
+                            <a href="{{ route('resume.json') }}"
+                               class="relative z-0 inline-block py-[10px] text-[15px] font-medium text-white after:absolute after:bottom-[5px] after:right-0 after:h-0.5 after:w-0 after:gradient-primary after:transition-all after:duration-500 group-hover:after:left-0 group-hover:after:w-full md:py-[15px]">
+                                JSON
+                            </a>
+                        </li>
+                    </ul>
                 </nav>
-            </div>
 
-            <div class="mt-12 border-t border-border/60 pt-8">
-                <p class="text-xs text-text-muted">&copy; {{ now()->year }} {{ config('app.name') }}. {{ __('All rights reserved.') }}</p>
+                <p class="mt-5 whitespace-nowrap text-sm text-[#636363] md:text-base">
+                    &copy; {{ now()->year }} {{ __('All rights reserved.') }}
+                    <a href="{{ route('home') }}" class="text-white transition-colors hover:text-accent">{{ config('app.name') }}</a>
+                </p>
             </div>
         </div>
     </footer>

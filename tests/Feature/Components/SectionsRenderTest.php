@@ -71,10 +71,10 @@ it('renders the certifications marquee with each certification title', function 
     }
 });
 
-it('renders the contact cta linking to the contact route', function () {
+it('renders the contact section with the embedded contact form', function () {
     $html = Blade::render('<x-organisms.sections.contact-cta />');
 
-    expect($html)->toContain(route('contact'))->toContain(__('home.contact_title'));
+    expect($html)->toContain(__('home.contact_title'))->toContain('wire:name="contact-form"');
 });
 
 it('renders decorative text with the passed text', function () {

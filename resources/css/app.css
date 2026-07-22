@@ -70,6 +70,12 @@
     color: transparent;
 }
 
+/* Gerold sliding button gradient (template "gradient-secondary") */
+@utility gradient-secondary {
+    background-image: linear-gradient(to right, var(--color-accent) 0%, var(--color-accent-deep) 51%, var(--color-accent) 100%);
+    background-size: 200% auto;
+}
+
 /* Gerold ambient glow blob (template "gradient-circle") */
 @utility gradient-circle {
     background-image: linear-gradient(260deg, var(--color-accent) 0%, rgba(115, 67, 210, 0) 100%);
