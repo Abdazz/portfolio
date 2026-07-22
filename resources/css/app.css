@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&family=Russo+One&display=swap');
 
 @import 'tailwindcss';
 @import '../../vendor/livewire/flux/dist/flux.css';
@@ -30,10 +30,15 @@
     --color-text-muted: #5a5170;
     --color-border: #e2dbf0;
     --color-accent-foreground: #ffffff;
+
+    /* End color of the Gerold heading gradient (light: deep purple, dark: white) */
+    --gradient-text-end: #2a1454;
 }
 
 @layer theme {
     .dark {
+        /* Flux resets --color-accent to white in dark mode; re-assert the Gerold purple */
+        --color-accent: #8750f7;
         --color-surface: #0f0715;
         --color-surface-muted: #140c1c;
         --color-surface-deep: #050709;
@@ -42,6 +47,7 @@
         --color-border: #ffffff24;
         --color-accent-foreground: #ffffff;
         --color-accent-content: #9b8dff;
+        --gradient-text-end: #ffffff;
     }
 }
 
@@ -58,10 +64,70 @@
 
 /* Gerold signature: purple gradient clipped onto display headings */
 @utility gradient-text {
-    background-image: linear-gradient(100deg, var(--color-accent) 0%, var(--color-accent-2) 100%);
+    background-image: linear-gradient(to right, var(--color-accent) 0%, var(--gradient-text-end) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+}
+
+/* Gerold ambient glow blob (template "gradient-circle") */
+@utility gradient-circle {
+    background-image: linear-gradient(260deg, var(--color-accent) 0%, rgba(115, 67, 210, 0) 100%);
+}
+
+/* Hero "HI" stroke-text watermark (template ".intro_text") */
+.intro-text svg {
+    font-family: 'Russo One', sans-serif;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 46%;
+    top: 55%;
+    transform: translate(-50%, -50%) scale(1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    animation: pulsate 3s infinite alternate ease-in-out;
+}
+
+.intro-text svg text {
+    text-transform: uppercase;
+    stroke-width: 1.2;
+    stroke: var(--color-accent);
+    fill: transparent;
+    font-size: 240px;
+    opacity: 0.2;
+    animation: stroke 4s;
+}
+
+.dark .intro-text svg text {
+    stroke: var(--color-accent-deep);
+    opacity: 0.7;
+}
+
+@keyframes stroke {
+    0% {
+        stroke-dashoffset: 25%;
+        stroke-dasharray: 0 50%;
+        stroke-width: 1;
+    }
+    100% {
+        stroke-dashoffset: 100%;
+        stroke-dasharray: 100% 0;
+        stroke-width: 1;
+    }
+}
+
+@keyframes pulsate {
+    0% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.05); }
+    100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .intro-text svg,
+    .intro-text svg text { animation: none; }
 }
 
 /* Horizontal marquee track (replaces Gerold's Swiper brand slider) */

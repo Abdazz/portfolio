@@ -2,8 +2,11 @@
 
 return [
     'hero_eyebrow' => 'Développeur Full-Stack',
+    'hero_greeting' => 'Je suis :name',
     'hero_title' => 'Construire des logiciels réfléchis',
     'hero_lead' => 'Je crée des applications web bilingues avec un soin particulier apporté aux détails, à la performance et à l\'expérience utilisateur.',
+    'hero_watermark' => 'HI',
+    'hero_download_cv' => 'Télécharger le CV',
     'cta_projects' => 'Voir mes projets',
     'cta_resume' => 'Télécharger le CV',
     'featured_title' => 'Projets en vedette',

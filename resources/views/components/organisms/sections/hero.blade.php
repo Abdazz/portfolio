@@ -1,70 +1,126 @@
-@props(['profile'])
+@props(['profile', 'stats' => null])
 
 @php
     $locale = app()->getLocale();
-    $headline = $profile?->getTranslation('headline', $locale) ?: __('home.hero_eyebrow');
+    $headline = $profile?->getTranslation('headline', $locale) ?: __('home.hero_title');
     $bio = $profile?->getTranslation('bio', $locale) ?: __('home.hero_lead');
     $avatar = $profile?->getFirstMediaUrl('avatar') ?: null;
+    $greetingName = $profile?->full_name ?: config('app.name');
+
+    $iconFor = fn (string $platform): string => match (strtolower($platform)) {
+        'linkedin' => 'fa-brands fa-linkedin-in',
+        'github' => 'fa-brands fa-github',
+        'twitter', 'x' => 'fa-brands fa-x-twitter',
+        'facebook' => 'fa-brands fa-facebook-f',
+        'instagram' => 'fa-brands fa-instagram',
+        'youtube' => 'fa-brands fa-youtube',
+        'dribbble' => 'fa-brands fa-dribbble',
+        'behance' => 'fa-brands fa-behance',
+        'gitlab' => 'fa-brands fa-gitlab',
+        'medium' => 'fa-brands fa-medium',
+        'dev', 'devto' => 'fa-brands fa-dev',
+        'stackoverflow', 'stack-overflow' => 'fa-brands fa-stack-overflow',
+        'whatsapp' => 'fa-brands fa-whatsapp',
+        'telegram' => 'fa-brands fa-telegram',
+        default => 'fa-solid fa-globe',
+    };
+
     $socials = collect($profile?->social_links ?? [])
         ->map(fn ($value, $key) => is_array($value)
-            ? ['label' => $value['label'] ?? ucfirst((string) $key), 'url' => $value['url'] ?? null]
-            : ['label' => ucfirst((string) $key), 'url' => $value])
+            ? ['label' => $value['label'] ?? ucfirst((string) $key), 'url' => $value['url'] ?? null, 'icon' => $iconFor($value['label'] ?? (string) $key)]
+            : ['label' => ucfirst((string) $key), 'url' => $value, 'icon' => $iconFor((string) $key)])
         ->filter(fn ($s) => filled($s['url']))
         ->values();
+
+    $socialCircleClasses = 'text-accent hover:text-white border border-accent w-[35px] h-[35px] rounded-full flex items-center justify-center overflow-hidden relative z-0 after:absolute after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:w-full after:h-full after:scale-0 after:bg-accent hover:after:scale-105 after:transition-all after:duration-300 after:-z-[1] after:rounded-full transition-colors duration-300';
+
+    $funfacts = collect([
+        ['value' => $stats['years'] ?? null, 'label' => __('home.stat_years')],
+        ['value' => $stats['projects'] ?? null, 'label' => __('home.stat_projects')],
+        ['value' => $stats['certifications'] ?? null, 'label' => __('home.stat_certifications')],
+        ['value' => $stats['languages'] ?? null, 'label' => __('home.stat_languages')],
+    ])->filter(fn ($f) => filled($f['value']))->values();
 @endphp
 
-<section class="relative overflow-hidden pt-16 pb-20 md:pt-24 md:pb-28 lg:pt-28 lg:pb-32">
-    {{-- Ambient purple glow --}}
-    <div class="pointer-events-none absolute -top-40 -right-24 -z-10 h-[32rem] w-[32rem] rounded-full bg-accent/20 blur-[120px]" aria-hidden="true"></div>
+<section class="relative overflow-hidden pt-[130px] pb-10 md:pb-[30px] lg:pt-40 lg:pb-[50px] xl:pt-[200px] after:absolute after:top-0 after:right-0 after:-z-[1] after:-mt-[5%] after:-mr-[5%] after:h-[308px] after:w-[322px] after:rounded-full after:gradient-circle after:blur-[150px]">
+    {{-- "HI" stroke-text watermark --}}
+    <div class="intro-text" aria-hidden="true">
+        <svg viewBox="0 0 1320 300" class="overflow-hidden">
+            <text x="50%" y="50%" text-anchor="middle">{{ __('home.hero_watermark') }}</text>
+        </svg>
+    </div>
 
-    <div class="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-[1.4fr_1fr] lg:gap-16 lg:px-8">
-        <div class="flex flex-col gap-7">
-            <span class="inline-flex items-center gap-2.5 self-start rounded-full border border-border bg-surface-muted px-4 py-2 text-sm font-medium text-accent-content" data-reveal>
-                <span class="relative flex h-2 w-2">
-                    <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green opacity-75"></span>
-                    <span class="relative inline-flex h-2 w-2 rounded-full bg-green"></span>
-                </span>
-                {{ $headline }}
-            </span>
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="gap-[30px] md:grid md:grid-cols-2 md:items-center">
+            <div>
+                <h4 class="mb-1.5 text-[22px] font-bold text-accent-deep md:text-[25px] lg:text-4xl xl:mb-[10px] dark:text-text" data-reveal>
+                    {{ __('home.hero_greeting', ['name' => $greetingName]) }}
+                </h4>
 
-            <h1 class="text-4xl font-semibold leading-[1.05] tracking-tight text-text sm:text-5xl lg:text-6xl xl:text-7xl" data-reveal>
-                @if ($profile?->full_name)
-                    {{ $profile->full_name }}
-                @else
-                    {{ config('app.name') }}
+                <h1 class="gradient-text mb-[15px] text-[35px] font-semibold md:text-[38px] lg:text-[50px] xl:text-6xl xl:leading-[1.2] 2xl:text-[65px]" data-reveal>
+                    {{ $headline }}
+                </h1>
+
+                @if ($avatar)
+                    <div class="my-[30px] flex items-center justify-center md:hidden">
+                        <img src="{{ $avatar }}" alt="{{ $greetingName }}"
+                             class="max-w-[80%] rotate-[4.29deg] rounded-[38px] border-2 border-accent-deep transition-all duration-300 hover:rotate-0 hover:border-accent"
+                             width="480" height="560">
+                    </div>
                 @endif
-            </h1>
 
-            <p class="max-w-xl text-lg leading-relaxed text-text-muted" data-reveal>{{ $bio }}</p>
+                <p class="max-w-[540px] text-xl leading-normal text-text" data-reveal>{{ $bio }}</p>
 
-            <div class="flex flex-wrap items-center gap-4" data-reveal>
-                <x-atoms.button href="{{ route('projects.index') }}" variant="primary" icon="arrow-up-right">
-                    {{ __('home.cta_projects') }}
-                </x-atoms.button>
-                <x-atoms.button href="{{ route('resume') }}" variant="outline">
-                    {{ __('home.cta_resume') }}
-                </x-atoms.button>
+                <div class="mt-5 flex flex-wrap items-center gap-[30px] md:mt-[30px] lg:mt-[50px] lg:flex-nowrap lg:gap-[25px]" data-reveal>
+                    <div>
+                        <a href="{{ route('resume.download') }}"
+                           class="whitespace-nowrap rounded-full border border-accent bg-transparent px-[35px] py-[17px] text-[15px] font-medium capitalize leading-none tracking-[1px] text-accent transition-colors duration-300 hover:bg-accent hover:text-white">
+                            {{ __('home.hero_download_cv') }}
+                            <i class="flaticon-download ml-0.5 text-[17px]" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    @if ($socials->isNotEmpty())
+                        <ul class="flex gap-x-5">
+                            @foreach ($socials as $social)
+                                <li>
+                                    <a href="{{ $social['url'] }}" target="_blank" rel="noopener noreferrer"
+                                       aria-label="{{ $social['label'] }}"
+                                       class="{{ $socialCircleClasses }}">
+                                        <i class="{{ $social['icon'] }}" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                            @endforeach
+                        </ul>
+                    @endif
+                </div>
             </div>
 
-            @if ($socials->isNotEmpty())
-                <div class="flex flex-wrap items-center gap-5 pt-2" data-reveal>
-                    @foreach ($socials as $social)
-                        <a href="{{ $social['url'] }}" target="_blank" rel="noopener noreferrer"
-                           class="text-sm font-medium text-text-muted transition-colors hover:text-accent-content">
-                            {{ $social['label'] ?? $social['url'] }}
-                        </a>
-                    @endforeach
+            @if ($avatar)
+                <div class="relative hidden md:flex md:items-center md:justify-center after:absolute after:bottom-0 after:left-0 after:-z-[1] after:h-[220px] after:w-[220px] after:rounded-full after:gradient-circle after:blur-[150px]" data-reveal>
+                    <img src="{{ $avatar }}" alt="{{ $greetingName }}"
+                         class="rotate-[4.29deg] rounded-[38px] border-2 border-accent-deep transition-all duration-300 hover:rotate-0 hover:border-accent"
+                         width="480" height="560">
                 </div>
             @endif
         </div>
-
-        @if ($avatar)
-            <div class="relative mx-auto w-full max-w-sm lg:mx-0" data-reveal>
-                <div class="absolute inset-0 -z-10 translate-x-4 translate-y-4 rounded-[2rem] gradient-primary opacity-30 blur-2xl" aria-hidden="true"></div>
-                <img src="{{ $avatar }}" alt="{{ $profile?->full_name }}"
-                     class="w-full rounded-[2rem] border border-border object-cover shadow-2xl shadow-accent/10"
-                     width="480" height="560">
-            </div>
-        @endif
     </div>
+
+    {{-- funfact stats --}}
+    @if ($funfacts->isNotEmpty())
+        <div class="mt-[60px] xl:mt-[70px]">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="grid grid-cols-2 gap-x-6 gap-y-[30px] text-accent lg:grid-cols-4 dark:text-text">
+                    @foreach ($funfacts as $fact)
+                        <div class="flex flex-col flex-wrap items-center justify-center gap-[15px] sm:flex-row sm:flex-nowrap lg:justify-start" data-reveal>
+                            <div class="text-[45px] font-medium tracking-[0.04em] md:text-[55px] xl:text-[64px]">
+                                {{ $fact['value'] }}
+                            </div>
+                            <div class="max-w-[120px] leading-snug">{{ $fact['label'] }}</div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    @endif
 </section>
