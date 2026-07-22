@@ -7,7 +7,7 @@
     <x-organisms.sections.about :profile="$profile" :stats="$stats" />
     <x-organisms.sections.services />
     <x-organisms.sections.portfolio :projects="$projects" />
-    <x-organisms.sections.experience :experiences="$experiences" />
+    <x-organisms.sections.experience :experiences="$experiences" :educations="$educations" />
     <x-organisms.sections.certifications-marquee :certifications="$certifications" />
     <x-organisms.sections.testimonials />
     <x-organisms.sections.blog />

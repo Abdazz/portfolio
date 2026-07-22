@@ -3,14 +3,13 @@
 @php($items = $projects->take($limit))
 
 @if ($items->isNotEmpty())
-    <section class="py-20 md:py-28 lg:py-32">
+    <section id="portfolio" class="pt-[60px] pb-[30px] md:pt-20 md:pb-[60px] lg:pt-[100px] lg:pb-20">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
-            <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between" data-reveal>
-                <x-molecules.section-heading :eyebrow="__('home.portfolio_eyebrow')" :title="__('home.portfolio_title')" />
-                <x-atoms.button href="{{ route('projects.index') }}" variant="outline" size="sm" icon="arrow-up-right" class="shrink-0">{{ __('home.featured_more') }}</x-atoms.button>
-            </div>
+            <x-molecules.section-heading :title="__('home.portfolio_title')">
+                {{ __('home.portfolio_lead') }}
+            </x-molecules.section-heading>
 
-            <div class="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="mt-10 grid gap-[30px] sm:grid-cols-2 md:mt-[50px]">
                 @foreach ($items as $i => $project)
                     <x-molecules.project-card :project="$project" :index="$i" />
                 @endforeach

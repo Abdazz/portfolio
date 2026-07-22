@@ -24,15 +24,20 @@ return [
 
     // Portfolio
     'portfolio_eyebrow' => 'Selected work',
-    'portfolio_title' => 'Projects I am proud of',
+    'portfolio_title' => 'My Recent Works',
+    'portfolio_lead' => 'A selection of projects I designed and built, from national platforms to AI-powered products.',
 
     // Experience
     'experience_eyebrow' => 'Career path',
     'experience_title' => 'Where I have worked',
+    'my_experience' => 'My Experience',
+    'my_education' => 'My Education',
+    'period_present' => 'Present',
 
     // Skills
     'skills_eyebrow' => 'Toolbox',
-    'skills_title' => 'Technologies I work with',
+    'skills_title' => 'My Skills',
+    'skills_lead' => 'The technologies I use daily to design, build, and ship reliable web platforms and AI systems.',
 
     // Resume
     'resume_eyebrow' => 'Resume',

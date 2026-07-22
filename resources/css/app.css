@@ -22,10 +22,10 @@
     --color-green: #00ff2f;
     --color-accent-content: #6d3fd4;
 
-    /* Light (cream) base */
-    --color-surface: #f6f3fc;
-    --color-surface-muted: #ece6f7;
-    --color-surface-deep: #efe8f7;
+    /* Light base (template: white body, cream-light stripes and cards) */
+    --color-surface: #ffffff;
+    --color-surface-muted: #f6f3fc;
+    --color-surface-deep: #f6f3fc;
     --color-text: #0f0715;
     --color-text-muted: #5a5170;
     --color-border: #e2dbf0;

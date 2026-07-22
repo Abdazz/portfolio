@@ -24,15 +24,20 @@ return [
 
     // Portfolio
     'portfolio_eyebrow' => 'Travaux choisis',
-    'portfolio_title' => 'Des projets dont je suis fier',
+    'portfolio_title' => 'Mes réalisations récentes',
+    'portfolio_lead' => 'Une sélection de projets que j\'ai conçus et développés, des plateformes nationales aux produits propulsés par l\'IA.',
 
     // Experience
     'experience_eyebrow' => 'Parcours',
     'experience_title' => 'Là où j\'ai travaillé',
+    'my_experience' => 'Mon Expérience',
+    'my_education' => 'Ma Formation',
+    'period_present' => 'Aujourd\'hui',
 
     // Skills
     'skills_eyebrow' => 'Boîte à outils',
-    'skills_title' => 'Les technologies que j\'utilise',
+    'skills_title' => 'Mes Compétences',
+    'skills_lead' => 'Les technologies que j\'utilise au quotidien pour concevoir, développer et livrer des plateformes web et des systèmes d\'IA fiables.',
 
     // Resume
     'resume_eyebrow' => 'CV',
