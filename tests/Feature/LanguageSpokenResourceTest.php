@@ -9,7 +9,7 @@ use Livewire\Livewire;
 // ─── Create ───────────────────────────────────────────────────────────────────
 
 test('admin can create a language spoken via the Filament resource', function () {
-    $admin = User::factory()->create(['app_authentication_secret' => 'JBSWY3DPEHPK3PXP']);
+    $admin = User::factory()->withTwoFactorEnabled()->create();
     $this->actingAs($admin);
 
     Livewire::test(CreateLanguageSpoken::class)
@@ -24,7 +24,7 @@ test('admin can create a language spoken via the Filament resource', function ()
 });
 
 test('create language spoken validates required fields', function () {
-    $admin = User::factory()->create(['app_authentication_secret' => 'JBSWY3DPEHPK3PXP']);
+    $admin = User::factory()->withTwoFactorEnabled()->create();
     $this->actingAs($admin);
 
     Livewire::test(CreateLanguageSpoken::class)
@@ -36,7 +36,7 @@ test('create language spoken validates required fields', function () {
 // ─── Update ───────────────────────────────────────────────────────────────────
 
 test('admin can update a language spoken via the Filament resource', function () {
-    $admin = User::factory()->create(['app_authentication_secret' => 'JBSWY3DPEHPK3PXP']);
+    $admin = User::factory()->withTwoFactorEnabled()->create();
     $this->actingAs($admin);
 
     $language = LanguageSpoken::factory()->create(['level' => 'B1']);
@@ -52,7 +52,7 @@ test('admin can update a language spoken via the Filament resource', function ()
 // ─── Delete ───────────────────────────────────────────────────────────────────
 
 test('admin can delete a language spoken via the edit page', function () {
-    $admin = User::factory()->create(['app_authentication_secret' => 'JBSWY3DPEHPK3PXP']);
+    $admin = User::factory()->withTwoFactorEnabled()->create();
     $this->actingAs($admin);
 
     $language = LanguageSpoken::factory()->create();

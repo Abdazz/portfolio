@@ -8,7 +8,7 @@ use Livewire\Livewire;
 // Profile is a singleton resource (edit-only, no create/delete pages).
 
 test('admin can update the profile via the Filament resource', function () {
-    $admin = User::factory()->create(['app_authentication_secret' => 'JBSWY3DPEHPK3PXP']);
+    $admin = User::factory()->withTwoFactorEnabled()->create();
     $this->actingAs($admin);
 
     $profile = Profile::factory()->create(['full_name' => 'Jane Doe']);
@@ -25,7 +25,7 @@ test('admin can update the profile via the Filament resource', function () {
 });
 
 test('update profile validates required fields', function () {
-    $admin = User::factory()->create(['app_authentication_secret' => 'JBSWY3DPEHPK3PXP']);
+    $admin = User::factory()->withTwoFactorEnabled()->create();
     $this->actingAs($admin);
 
     $profile = Profile::factory()->create();

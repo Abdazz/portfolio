@@ -49,16 +49,27 @@ class SiteSetting extends Model implements HasMedia
 
     /**
      * Always return the singleton record, creating it if it doesn't exist.
+     *
+     * `id` is intentionally excluded from $fillable, so firstOrCreate(['id' => 1], ...)
+     * can never force the row's id via mass assignment; it must be set directly.
      */
     public static function instance(): static
     {
-        /** @var static */
-        return static::firstOrCreate(['id' => 1], [
+        if ($instance = static::find(1)) {
+            return $instance;
+        }
+
+        $instance = new static([
             'meta_title' => ['en' => config('app.name'), 'fr' => config('app.name')],
             'meta_description' => ['en' => '', 'fr' => ''],
             'social_links' => [],
             'resume_template' => 'default',
             'home_layout' => 'gerold-01',
         ]);
+
+        $instance->id = 1;
+        $instance->save();
+
+        return $instance;
     }
 }

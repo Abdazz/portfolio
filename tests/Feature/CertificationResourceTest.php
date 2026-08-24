@@ -9,7 +9,7 @@ use Livewire\Livewire;
 // ─── Create ───────────────────────────────────────────────────────────────────
 
 test('admin can create a certification via the Filament resource', function () {
-    $admin = User::factory()->create(['app_authentication_secret' => 'JBSWY3DPEHPK3PXP']);
+    $admin = User::factory()->withTwoFactorEnabled()->create();
     $this->actingAs($admin);
 
     Livewire::test(CreateCertification::class)
@@ -24,7 +24,7 @@ test('admin can create a certification via the Filament resource', function () {
 });
 
 test('create certification validates required fields', function () {
-    $admin = User::factory()->create(['app_authentication_secret' => 'JBSWY3DPEHPK3PXP']);
+    $admin = User::factory()->withTwoFactorEnabled()->create();
     $this->actingAs($admin);
 
     Livewire::test(CreateCertification::class)
@@ -36,7 +36,7 @@ test('create certification validates required fields', function () {
 // ─── Update ───────────────────────────────────────────────────────────────────
 
 test('admin can update a certification via the Filament resource', function () {
-    $admin = User::factory()->create(['app_authentication_secret' => 'JBSWY3DPEHPK3PXP']);
+    $admin = User::factory()->withTwoFactorEnabled()->create();
     $this->actingAs($admin);
 
     $certification = Certification::factory()->create(['issuer' => 'OldCorp']);
@@ -52,7 +52,7 @@ test('admin can update a certification via the Filament resource', function () {
 // ─── Delete ───────────────────────────────────────────────────────────────────
 
 test('admin can delete a certification via the edit page', function () {
-    $admin = User::factory()->create(['app_authentication_secret' => 'JBSWY3DPEHPK3PXP']);
+    $admin = User::factory()->withTwoFactorEnabled()->create();
     $this->actingAs($admin);
 
     $certification = Certification::factory()->create();

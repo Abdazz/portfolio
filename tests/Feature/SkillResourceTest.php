@@ -9,7 +9,7 @@ use Livewire\Livewire;
 // ─── Create ───────────────────────────────────────────────────────────────────
 
 test('admin can create a skill via the Filament resource', function () {
-    $admin = User::factory()->create(['app_authentication_secret' => 'JBSWY3DPEHPK3PXP']);
+    $admin = User::factory()->withTwoFactorEnabled()->create();
     $this->actingAs($admin);
 
     Livewire::test(CreateSkill::class)
@@ -25,7 +25,7 @@ test('admin can create a skill via the Filament resource', function () {
 });
 
 test('create skill validates required fields', function () {
-    $admin = User::factory()->create(['app_authentication_secret' => 'JBSWY3DPEHPK3PXP']);
+    $admin = User::factory()->withTwoFactorEnabled()->create();
     $this->actingAs($admin);
 
     Livewire::test(CreateSkill::class)
@@ -37,7 +37,7 @@ test('create skill validates required fields', function () {
 // ─── Update ───────────────────────────────────────────────────────────────────
 
 test('admin can update a skill via the Filament resource', function () {
-    $admin = User::factory()->create(['app_authentication_secret' => 'JBSWY3DPEHPK3PXP']);
+    $admin = User::factory()->withTwoFactorEnabled()->create();
     $this->actingAs($admin);
 
     $skill = Skill::factory()->create(['category' => 'frontend']);
@@ -53,7 +53,7 @@ test('admin can update a skill via the Filament resource', function () {
 // ─── Delete ───────────────────────────────────────────────────────────────────
 
 test('admin can delete a skill via the edit page', function () {
-    $admin = User::factory()->create(['app_authentication_secret' => 'JBSWY3DPEHPK3PXP']);
+    $admin = User::factory()->withTwoFactorEnabled()->create();
     $this->actingAs($admin);
 
     $skill = Skill::factory()->create();

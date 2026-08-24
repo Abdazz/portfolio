@@ -10,7 +10,7 @@ use Livewire\Livewire;
 
 function enrolledAdmin(): User
 {
-    return User::factory()->create(['app_authentication_secret' => 'JBSWY3DPEHPK3PXP']);
+    return User::factory()->withTwoFactorEnabled()->create();
 }
 
 // ─── Create ───────────────────────────────────────────────────────────────────

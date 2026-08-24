@@ -42,4 +42,16 @@ class UserFactory extends Factory
             'email_verified_at' => null,
         ]);
     }
+
+    /**
+     * Indicate that the user has completed Fortify two-factor authentication setup.
+     */
+    public function withTwoFactorEnabled(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'two_factor_secret' => encrypt('JBSWY3DPEHPK3PXP'),
+            'two_factor_recovery_codes' => encrypt(json_encode([])),
+            'two_factor_confirmed_at' => now(),
+        ]);
+    }
 }

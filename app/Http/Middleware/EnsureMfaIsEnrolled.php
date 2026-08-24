@@ -2,8 +2,8 @@
 
 namespace App\Http\Middleware;
 
+use App\Models\User;
 use Closure;
-use Filament\Auth\MultiFactor\App\Contracts\HasAppAuthentication;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
@@ -12,10 +12,9 @@ use Symfony\Component\HttpFoundation\Response;
  * Defence-in-depth guard: ensures the authenticated admin has enrolled in TOTP
  * before reaching any panel page.
  *
- * Filament's `->multiFactorAuthentication([...], isRequired: true)` is the primary
- * enforcement mechanism and redirects unenrolled users to the MFA setup page.
- * This middleware is a safety net placed in `authMiddleware` that aborts with 403
- * if a request somehow bypasses Filament's own redirect.
+ * Fortify's two-factor setup is the primary enforcement mechanism. This middleware
+ * is a safety net placed in `authMiddleware` that aborts with 403 if a request
+ * somehow bypasses that flow.
  */
 class EnsureMfaIsEnrolled
 {
@@ -23,7 +22,7 @@ class EnsureMfaIsEnrolled
     {
         $user = Auth::user();
 
-        if ($user instanceof HasAppAuthentication && $user->getAppAuthenticationSecret() === null) {
+        if ($user instanceof User && ! $user->hasEnabledTwoFactorAuthentication()) {
             abort(403, __('Multi-factor authentication must be configured before accessing the admin panel.'));
         }
 

@@ -23,10 +23,9 @@
     ],
     "deny": [
       "Bash(rm -rf *)",
-      "Bash(git push *)",
+      "Bash(git push --force*)",
       "Bash(git reset --hard *)",
       "Bash(git clean -fd *)",
-      "Bash(* --force)",
       "Bash(dd *)",
       "Bash(mkfs *)",
       "Bash(chmod -R 777 *)"

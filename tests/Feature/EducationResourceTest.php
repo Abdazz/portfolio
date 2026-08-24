@@ -9,7 +9,7 @@ use Livewire\Livewire;
 // ─── Create ───────────────────────────────────────────────────────────────────
 
 test('admin can create an education entry via the Filament resource', function () {
-    $admin = User::factory()->create(['app_authentication_secret' => 'JBSWY3DPEHPK3PXP']);
+    $admin = User::factory()->withTwoFactorEnabled()->create();
     $this->actingAs($admin);
 
     Livewire::test(CreateEducation::class)
@@ -25,7 +25,7 @@ test('admin can create an education entry via the Filament resource', function (
 });
 
 test('create education validates required fields', function () {
-    $admin = User::factory()->create(['app_authentication_secret' => 'JBSWY3DPEHPK3PXP']);
+    $admin = User::factory()->withTwoFactorEnabled()->create();
     $this->actingAs($admin);
 
     Livewire::test(CreateEducation::class)
@@ -37,7 +37,7 @@ test('create education validates required fields', function () {
 // ─── Update ───────────────────────────────────────────────────────────────────
 
 test('admin can update an education entry via the Filament resource', function () {
-    $admin = User::factory()->create(['app_authentication_secret' => 'JBSWY3DPEHPK3PXP']);
+    $admin = User::factory()->withTwoFactorEnabled()->create();
     $this->actingAs($admin);
 
     $education = Education::factory()->create(['institution' => 'Old University']);
@@ -53,7 +53,7 @@ test('admin can update an education entry via the Filament resource', function (
 // ─── Delete ───────────────────────────────────────────────────────────────────
 
 test('admin can delete an education entry via the edit page', function () {
-    $admin = User::factory()->create(['app_authentication_secret' => 'JBSWY3DPEHPK3PXP']);
+    $admin = User::factory()->withTwoFactorEnabled()->create();
     $this->actingAs($admin);
 
     $education = Education::factory()->create();

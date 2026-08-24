@@ -14,9 +14,7 @@ beforeEach(function () {
 });
 
 test('user with MFA enrolled passes the middleware', function () {
-    $user = User::factory()->create([
-        'app_authentication_secret' => 'JBSWY3DPEHPK3PXP', // any non-null secret
-    ]);
+    $user = User::factory()->withTwoFactorEnabled()->create();
 
     $this->actingAs($user)
         ->get('/test-mfa-guard')
@@ -24,9 +22,7 @@ test('user with MFA enrolled passes the middleware', function () {
 });
 
 test('user without MFA enrolled is blocked with 403', function () {
-    $user = User::factory()->create([
-        'app_authentication_secret' => null,
-    ]);
+    $user = User::factory()->create();
 
     $this->actingAs($user)
         ->get('/test-mfa-guard')
@@ -35,5 +31,5 @@ test('user without MFA enrolled is blocked with 403', function () {
 
 test('unauthenticated request passes through (middleware only guards authenticated users)', function () {
     $this->get('/test-mfa-guard')
-        ->assertOk(); // no Auth user → no HasAppAuthentication check
+        ->assertOk(); // no Auth user → middleware skips the check
 });

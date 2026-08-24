@@ -32,7 +32,7 @@ test('unauthenticated /admin redirects to Fortify login', function () {
 });
 
 test('an authenticated admin reaches the panel', function () {
-    $admin = User::factory()->create();
+    $admin = User::factory()->withTwoFactorEnabled()->create();
 
     $response = $this->actingAs($admin)->get('/admin');
 

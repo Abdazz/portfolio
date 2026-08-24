@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Project;
 use App\Support\JsonQuery;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\View\View;
 
 class ProjectsController extends Controller
@@ -17,7 +18,11 @@ class ProjectsController extends Controller
     {
         $locale = app()->getLocale();
 
-        $project = Project::whereRaw(JsonQuery::extract('slug', $locale).' = ?', [$slug])->firstOrFail();
+        $project = Cache::remember(
+            "project:show:{$locale}:{$slug}",
+            now()->addHour(),
+            fn () => Project::whereRaw(JsonQuery::extract('slug', $locale).' = ?', [$slug])->firstOrFail(),
+        );
 
         return view('projects.show', compact('project'));
     }

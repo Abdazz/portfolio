@@ -11,6 +11,7 @@ use App\Models\Project;
 use App\Models\SiteSetting;
 use App\Models\Skill;
 use App\Services\Home\HomeLayoutRegistry;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\View\View;
 
 class HomeController extends Controller
@@ -19,8 +20,12 @@ class HomeController extends Controller
 
     public function __invoke(): View
     {
-        $profile = Profile::first();
-        $projects = Project::orderBy('order')->with('media')->get();
+        $profile = Cache::remember('home:profile', now()->addDay(), fn () => Profile::first());
+        $projects = Cache::remember(
+            'home:featured_projects',
+            now()->addHour(),
+            fn () => Project::orderBy('order')->with('media')->get(),
+        );
         $experiences = Experience::orderByDesc('start_date')->get();
         $educations = Education::orderByDesc('start_date')->get();
         $skills = Skill::orderBy('order')->get();
