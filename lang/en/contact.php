@@ -5,6 +5,8 @@ return [
     'subtitle' => 'Have a question or want to work together? Drop me a message.',
     'name' => 'Name',
     'email' => 'Email address',
+    'phone' => 'Phone',
+    'location' => 'Location',
     'subject' => 'Subject',
     'subject_optional' => 'Subject (optional)',
     'message' => 'Message',

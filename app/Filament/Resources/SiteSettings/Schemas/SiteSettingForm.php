@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\SiteSettings\Schemas;
 
+use App\Services\Home\HomeLayoutRegistry;
 use App\Services\Resume\TemplateRegistry;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Select;
@@ -57,6 +58,15 @@ class SiteSettingForm
                             ->columns(2)
                             ->defaultItems(0)
                             ->addActionLabel(__('Add social link')),
+                    ]),
+
+                Section::make(__('Home page'))
+                    ->schema([
+                        Select::make('home_layout')
+                            ->label(__('Layout'))
+                            ->options(fn () => app(HomeLayoutRegistry::class)->selectOptions())
+                            ->default('gerold-01')
+                            ->required(),
                     ]),
 
                 Section::make(__('Resume'))

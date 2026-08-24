@@ -9,9 +9,17 @@ class BrowsershotPdfRenderer implements PdfRenderer
 {
     public function render(string $url, string $absolutePath): void
     {
+        $this->configure($url)->savePdf($absolutePath);
+    }
+
+    /**
+     * Build the configured Browsershot instance for the given URL.
+     */
+    public function configure(string $url): Browsershot
+    {
         $shot = Browsershot::url($url)
             ->noSandbox()
-            ->addChromiumArguments(['--disable-gpu', '--disable-dev-shm-usage'])
+            ->addChromiumArguments(['disable-gpu', 'disable-dev-shm-usage'])
             ->format('A4')
             ->margins(18, 16, 18, 16);
 
@@ -32,6 +40,6 @@ class BrowsershotPdfRenderer implements PdfRenderer
             $shot->setNpmBinary($npmPath);
         }
 
-        $shot->savePdf($absolutePath);
+        return $shot;
     }
 }

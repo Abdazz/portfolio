@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&family=Russo+One&display=swap');
 
 @import 'tailwindcss';
 @import '../../vendor/livewire/flux/dist/flux.css';
@@ -11,89 +11,143 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-    --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-    --font-display: 'Fraunces', ui-serif, Georgia, Cambria, 'Times New Roman', serif;
-    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    --font-sans: 'Sora', ui-sans-serif, system-ui, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+    --font-display: 'Sora', ui-serif, Georgia, serif;
 
-    --color-zinc-50: #fafafa;
-    --color-zinc-100: #f5f5f5;
-    --color-zinc-200: #e5e5e5;
-    --color-zinc-300: #d4d4d4;
-    --color-zinc-400: #a3a3a3;
-    --color-zinc-500: #737373;
-    --color-zinc-600: #525252;
-    --color-zinc-700: #404040;
-    --color-zinc-800: #262626;
-    --color-zinc-900: #171717;
-    --color-zinc-950: #0a0a0a;
+    /* Gerold purple accent */
+    --color-accent: #8750f7;
+    --color-accent-2: #9b8dff;
+    --color-accent-deep: #2a1454;
+    --color-green: #00ff2f;
+    --color-accent-content: #6d3fd4;
 
-    /* Brand amber — shared by public site and /admin */
-    --color-brand-50:  #fffbeb;
-    --color-brand-100: #fef3c7;
-    --color-brand-200: #fde68a;
-    --color-brand-300: #fcd34d;
-    --color-brand-400: #fbbf24;
-    --color-brand-500: #f59e0b;
-    --color-brand-600: #d97706;
-    --color-brand-700: #b45309;
-    --color-brand-800: #92400e;
-    --color-brand-900: #78350f;
-    --color-brand-950: #451a03;
+    /* Light base (template: white body, cream-light stripes and cards) */
+    --color-surface: #ffffff;
+    --color-surface-muted: #f6f3fc;
+    --color-surface-deep: #f6f3fc;
+    --color-text: #0f0715;
+    --color-text-muted: #5a5170;
+    --color-border: #e2dbf0;
+    --color-accent-foreground: #ffffff;
 
-    /* Warm light theme (base) */
-    --color-surface: #faf7f2;
-    --color-surface-muted: #f0ebe2;
-    --color-surface-inverse: #0f0e0b;
-    --color-text: #1c1812;
-    --color-text-muted: #7a6b57;
-    --color-text-inverse: #f0ebe2;
-    --color-border: #e2dbd0;
-
-    --color-accent: var(--color-brand-600);
-    --color-accent-content: var(--color-brand-700);
-    --color-accent-foreground: var(--color-white);
+    /* End color of the Gerold heading gradient (light: deep purple, dark: white) */
+    --gradient-text-end: #2a1454;
 }
 
 @layer theme {
     .dark {
-        --color-surface: #0d0c09;
-        --color-surface-muted: #161410;
-        --color-surface-inverse: #ede8df;
-        --color-text: #ede8df;
-        --color-text-muted: #8a7a65;
-        --color-text-inverse: #0d0c09;
-        --color-border: #2c271e;
-
-        --color-accent: var(--color-brand-500);
-        --color-accent-content: var(--color-brand-400);
-        --color-accent-foreground: var(--color-zinc-950);
+        /* Flux resets --color-accent to white in dark mode; re-assert the Gerold purple */
+        --color-accent: #8750f7;
+        --color-surface: #0f0715;
+        --color-surface-muted: #140c1c;
+        --color-surface-deep: #050709;
+        --color-text: #dddddd;
+        --color-text-muted: #7a7a7a;
+        --color-border: #ffffff24;
+        --color-accent-foreground: #ffffff;
+        --color-accent-content: #9b8dff;
+        --gradient-text-end: #ffffff;
     }
 }
 
 @layer base {
-    *,
-    ::after,
-    ::before,
-    ::backdrop,
-    ::file-selector-button {
-        border-color: var(--color-border);
-    }
+    html { color-scheme: dark; }
+    html:not(.dark) { color-scheme: light; }
+    body { background: var(--color-surface); color: var(--color-text); font-family: var(--font-sans); }
+    *, ::after, ::before { border-color: var(--color-border); }
+}
 
-    /* Subtle grain texture */
-    body::before {
-        content: '';
-        position: fixed;
-        inset: 0;
-        z-index: 9998;
-        pointer-events: none;
-        background-image: radial-gradient(circle, rgba(200, 185, 165, 0.06) 1px, transparent 1px);
-        background-size: 3px 3px;
-    }
+@utility gradient-primary {
+    background-image: linear-gradient(260deg, var(--color-accent-deep) 0%, var(--color-accent) 100%);
+}
 
-    /* Optical sizing for variable display font */
-    .font-display {
-        font-optical-sizing: auto;
+/* Gerold signature: purple gradient clipped onto display headings */
+@utility gradient-text {
+    background-image: linear-gradient(to right, var(--color-accent) 0%, var(--gradient-text-end) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Gerold sliding button gradient (template "gradient-secondary") */
+@utility gradient-secondary {
+    background-image: linear-gradient(to right, var(--color-accent) 0%, var(--color-accent-deep) 51%, var(--color-accent) 100%);
+    background-size: 200% auto;
+}
+
+/* Gerold ambient glow blob (template "gradient-circle") */
+@utility gradient-circle {
+    background-image: linear-gradient(260deg, var(--color-accent) 0%, rgba(115, 67, 210, 0) 100%);
+}
+
+/* Hero "HI" stroke-text watermark (template ".intro_text") */
+.intro-text svg {
+    font-family: 'Russo One', sans-serif;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 46%;
+    top: 55%;
+    transform: translate(-50%, -50%) scale(1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    animation: pulsate 3s infinite alternate ease-in-out;
+}
+
+.intro-text svg text {
+    text-transform: uppercase;
+    stroke-width: 1.2;
+    stroke: var(--color-accent);
+    fill: transparent;
+    font-size: 240px;
+    opacity: 0.2;
+    animation: stroke 4s;
+}
+
+.dark .intro-text svg text {
+    stroke: var(--color-accent-deep);
+    opacity: 0.7;
+}
+
+@keyframes stroke {
+    0% {
+        stroke-dashoffset: 25%;
+        stroke-dasharray: 0 50%;
+        stroke-width: 1;
     }
+    100% {
+        stroke-dashoffset: 100%;
+        stroke-dasharray: 100% 0;
+        stroke-width: 1;
+    }
+}
+
+@keyframes pulsate {
+    0% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.05); }
+    100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .intro-text svg,
+    .intro-text svg text { animation: none; }
+}
+
+/* Horizontal marquee track (replaces Gerold's Swiper brand slider) */
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+@utility animate-marquee {
+    animation: marquee var(--marquee-speed, 30s) linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .animate-marquee { animation: none; }
 }
 
 /* Entry animations */

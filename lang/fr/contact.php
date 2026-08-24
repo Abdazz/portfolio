@@ -5,6 +5,8 @@ return [
     'subtitle' => 'Vous avez une question ou souhaitez collaborer ? Envoyez-moi un message.',
     'name' => 'Nom',
     'email' => 'Adresse e-mail',
+    'phone' => 'Téléphone',
+    'location' => 'Localisation',
     'subject' => 'Sujet',
     'subject_optional' => 'Sujet (facultatif)',
     'message' => 'Message',

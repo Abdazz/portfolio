@@ -14,4 +14,5 @@ return [
     'tech_stack' => 'Stack technique',
     'links' => 'Liens',
     'back' => 'Retour aux projets',
+    'gallery' => 'Galerie',
 ];
