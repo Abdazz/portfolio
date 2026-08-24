@@ -1,0 +1,89 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "Abdoul-Aziz ZOROM" [ref=e5] [cursor=pointer]:
+        - /url: http://localhost:8090/fr
+      - navigation "Navigation principale" [ref=e6]:
+        - link "Accueil" [ref=e7] [cursor=pointer]:
+          - /url: http://localhost:8090/fr
+        - link "Projets" [ref=e8] [cursor=pointer]:
+          - /url: http://localhost:8090/fr/projets
+        - link "CV" [ref=e9] [cursor=pointer]:
+          - /url: http://localhost:8090/fr/cv
+        - link "Contact" [ref=e10] [cursor=pointer]:
+          - /url: http://localhost:8090/fr/contact
+      - generic [ref=e11]:
+        - generic "Changer la langue" [ref=e12]:
+          - link "en" [ref=e13] [cursor=pointer]:
+            - /url: http://localhost:8090/en
+          - generic [ref=e14]: fr
+        - button "Changer le thème" [ref=e15]:
+          - img [ref=e16]
+  - main [ref=e18]:
+    - generic [ref=e20]:
+      - paragraph [ref=e21]: Développeur Full-Stack Senior & Expert IA
+      - heading "Abdoul-Aziz ZOROM" [level=1] [ref=e22]
+      - paragraph [ref=e23]: Développeur Full-Stack Senior et Expert IA avec plus de 8 ans d'expérience dans la conception de plateformes web évolutives et de systèmes intelligents. Je me spécialise dans Laravel, Livewire, Angular et les technologies IA modernes, notamment LangChain, les pipelines RAG et l'orchestration multi-agents. Actuellement CTO chez YULCOM Technologies, je pilote des projets de transformation numérique nationaux et internationaux. Je mêle créativité, précision et innovation pour créer des expériences numériques de nouvelle génération.
+      - generic [ref=e24]:
+        - link "Voir mes projets" [ref=e25] [cursor=pointer]:
+          - /url: http://localhost:8090/fr/projets
+          - img [ref=e26]
+          - text: Voir mes projets
+        - link "Télécharger le CV" [ref=e31] [cursor=pointer]:
+          - /url: http://localhost:8090/fr/cv
+          - img [ref=e32]
+          - text: Télécharger le CV
+    - generic [ref=e35]:
+      - generic [ref=e36]:
+        - generic [ref=e37]:
+          - generic [ref=e38]: "01"
+          - generic [ref=e39]: —
+          - heading "Projets en vedette" [level=2] [ref=e40]
+        - link "Voir tous les projets →" [ref=e41] [cursor=pointer]:
+          - /url: http://localhost:8090/fr/projets
+      - generic [ref=e42]:
+        - article [ref=e44]:
+          - generic [ref=e47]: "01"
+          - generic [ref=e48]:
+            - generic [ref=e49]:
+              - heading "BidOnMyTrip" [level=3] [ref=e50]:
+                - link "BidOnMyTrip" [ref=e51] [cursor=pointer]:
+                  - /url: http://localhost:8090/fr/projets/bidonmytrip
+              - generic [ref=e52]: "01"
+            - paragraph [ref=e53]: Une plateforme innovante de planification et réservation de voyages où les voyageurs publient leur demande et les agences se font concurrence en temps réel pour proposer le meilleur forfait.
+            - generic [ref=e54]:
+              - generic [ref=e55]: Laravel
+              - generic [ref=e56]: Angular
+              - generic [ref=e57]: Docker
+              - generic [ref=e58]: OpenAI API
+              - generic [ref=e59]: "+2"
+        - article [ref=e61]:
+          - generic [ref=e64]: "02"
+          - generic [ref=e65]:
+            - generic [ref=e66]:
+              - heading "DigiClass" [level=3] [ref=e67]:
+                - link "DigiClass" [ref=e68] [cursor=pointer]:
+                  - /url: http://localhost:8090/fr/projets/digiclass
+              - generic [ref=e69]: "02"
+            - paragraph [ref=e70]: Une plateforme d'apprentissage en ligne pour les élèves africains (6e–Terminale) proposant cours, exercices et quiz, avec une place de marché pour les cours particuliers à domicile.
+            - generic [ref=e71]:
+              - generic [ref=e72]: Laravel
+              - generic [ref=e73]: PHP
+              - generic [ref=e74]: MySQL
+              - generic [ref=e75]: JavaScript
+  - contentinfo [ref=e76]:
+    - generic [ref=e78]:
+      - generic [ref=e79]:
+        - paragraph [ref=e80]: Abdoul-Aziz ZOROM
+        - paragraph [ref=e81]: © 2026
+      - navigation "Footer navigation" [ref=e82]:
+        - link "Projets" [ref=e83] [cursor=pointer]:
+          - /url: http://localhost:8090/fr/projets
+        - link "CV" [ref=e84] [cursor=pointer]:
+          - /url: http://localhost:8090/fr/cv
+        - link "Contact" [ref=e85] [cursor=pointer]:
+          - /url: http://localhost:8090/fr/contact
+        - link "JSON" [ref=e86] [cursor=pointer]:
+          - /url: http://localhost:8090/fr/cv/export.json

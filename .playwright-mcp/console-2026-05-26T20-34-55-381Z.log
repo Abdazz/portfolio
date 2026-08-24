@@ -1,0 +1,259 @@
+[     631ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:8090/en/resume/download:0
+[     631ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ http://localhost:8090/en/resume/download:0
+[     655ms] [LOG] 🔍 Browser logger active (MCP server detected). Posting to: http://localhost:8090/_boost/browser-logs @ http://localhost:8090/en/resume/download:21
+[    1065ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1067ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1068ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1069ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1070ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1072ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1074ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1075ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1076ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1077ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1077ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1077ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1078ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1079ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1230ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1231ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1236ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1236ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1237ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1237ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1238ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1239ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1243ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1245ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1396ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1398ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1401ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1447ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1449ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1454ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1456ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1457ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1463ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1467ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1470ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1477ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1485ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1499ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1505ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1540ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1544ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1551ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1553ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1560ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1566ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1572ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1576ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1581ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1586ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1590ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1592ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1597ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1600ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1603ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1605ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1610ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1614ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1617ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1622ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1625ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1630ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1635ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1641ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1646ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1650ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1656ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1657ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1660ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1663ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1671ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1671ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1672ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1672ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1672ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1791ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1791ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1793ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1794ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1796ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1797ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1798ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1799ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1802ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1802ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1808ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1810ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1811ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1813ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1814ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1816ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1817ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1819ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1820ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1822ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1823ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1825ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1826ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1828ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1828ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1829ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1830ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1830ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1831ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1832ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1832ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1834ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1835ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1835ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1835ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1836ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1836ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1837ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1840ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1840ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1841ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1842ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1842ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1843ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1844ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1844ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1844ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1880ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1881ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1881ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1882ms] [INFO] [Report Only] Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com".
+ @ http://localhost:8090/en/resume/download:4323
+[    1976ms] [INFO] [Report Only] Refused to load the script 'http://0.0.0.0:5173/@vite/client' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+ @ http://localhost:8090/en/resume/download:0
+[    1976ms] [INFO] [Report Only] Refused to load the script 'http://0.0.0.0:5173/node_modules/vite/dist/client/env.mjs' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' challenges.cloudflare.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+ @ http://localhost:8090/en/resume/download:0
+[    1995ms] [INFO] [Report Only] Refused to connect to 'ws://0.0.0.0:5173/?token=J8J3MslTeRmE' because it violates the following Content Security Policy directive: "connect-src 'self'".
+ @ http://0.0.0.0:5173/@vite/client:840

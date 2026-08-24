@@ -1,0 +1,62 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "Abdoul-Aziz ZOROM" [ref=e5] [cursor=pointer]:
+        - /url: http://localhost:8090/en
+      - navigation "Main navigation" [ref=e6]:
+        - link "Home" [ref=e7] [cursor=pointer]:
+          - /url: http://localhost:8090/en
+        - link "Projects" [ref=e8] [cursor=pointer]:
+          - /url: http://localhost:8090/en/projects
+        - link "Resume" [ref=e9] [cursor=pointer]:
+          - /url: http://localhost:8090/en/resume
+        - link "Contact" [ref=e10] [cursor=pointer]:
+          - /url: http://localhost:8090/en/contact
+      - generic [ref=e11]:
+        - generic "Switch language" [ref=e12]:
+          - generic [ref=e13]: en
+          - link "fr" [ref=e14] [cursor=pointer]:
+            - /url: http://localhost:8090/fr/contact
+        - button "Toggle theme" [ref=e15]:
+          - img [ref=e16]
+  - main [ref=e18]:
+    - generic [ref=e19]:
+      - generic [ref=e20]:
+        - paragraph [ref=e21]: Contact
+        - heading "Contact" [level=1] [ref=e22]
+        - paragraph [ref=e23]: Have a question or want to work together? Drop me a message.
+      - generic [ref=e27]:
+        - generic [ref=e28]:
+          - generic [ref=e29]:
+            - generic [ref=e30]: Name
+            - textbox "Name" [ref=e31]
+            - paragraph [ref=e55]: The name field is required.
+          - generic [ref=e32]:
+            - generic [ref=e33]: Email address
+            - textbox "Email address" [ref=e34]
+            - paragraph [ref=e56]: The email field is required.
+        - generic [ref=e35]:
+          - generic [ref=e36]: Subject (optional)
+          - textbox "Subject (optional)" [ref=e37]
+        - generic [ref=e38]:
+          - generic [ref=e39]: Message
+          - textbox "Message" [ref=e40]
+          - paragraph [ref=e57]: The message field is required.
+        - button "Send message" [ref=e42]:
+          - generic [ref=e43]: Send message
+  - contentinfo [ref=e44]:
+    - generic [ref=e46]:
+      - generic [ref=e47]:
+        - paragraph [ref=e48]: Abdoul-Aziz ZOROM
+        - paragraph [ref=e49]: © 2026
+      - navigation "Footer navigation" [ref=e50]:
+        - link "Projects" [ref=e51] [cursor=pointer]:
+          - /url: http://localhost:8090/en/projects
+        - link "Resume" [ref=e52] [cursor=pointer]:
+          - /url: http://localhost:8090/en/resume
+        - link "Contact" [ref=e53] [cursor=pointer]:
+          - /url: http://localhost:8090/en/contact
+        - link "JSON" [ref=e54] [cursor=pointer]:
+          - /url: http://localhost:8090/en/resume/export.json

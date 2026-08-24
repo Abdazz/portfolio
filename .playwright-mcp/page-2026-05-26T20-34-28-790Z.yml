@@ -1,0 +1,68 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "Abdoul-Aziz ZOROM" [ref=e5] [cursor=pointer]:
+        - /url: http://localhost:8090/en
+      - navigation "Main navigation" [ref=e6]:
+        - link "Home" [ref=e7] [cursor=pointer]:
+          - /url: http://localhost:8090/en
+        - link "Projects" [ref=e8] [cursor=pointer]:
+          - /url: http://localhost:8090/en/projects
+        - link "Resume" [ref=e9] [cursor=pointer]:
+          - /url: http://localhost:8090/en/resume
+        - link "Contact" [ref=e10] [cursor=pointer]:
+          - /url: http://localhost:8090/en/contact
+      - generic [ref=e11]:
+        - generic "Switch language" [ref=e12]:
+          - generic [ref=e13]: en
+          - link "fr" [ref=e14] [cursor=pointer]:
+            - /url: http://localhost:8090/fr/projets/bidonmytrip
+        - button "Toggle theme" [ref=e15]:
+          - img [ref=e16]
+  - main [ref=e18]:
+    - article [ref=e19]:
+      - navigation "Breadcrumb" [ref=e21]:
+        - list [ref=e22]:
+          - listitem [ref=e23]:
+            - link "Home" [ref=e24] [cursor=pointer]:
+              - /url: http://localhost:8090/en
+          - listitem [ref=e25]:
+            - img [ref=e26]
+            - link "Projects" [ref=e28] [cursor=pointer]:
+              - /url: http://localhost:8090/en/projects
+          - listitem [ref=e29]:
+            - img [ref=e30]
+            - generic [ref=e32]: BidOnMyTrip
+      - generic [ref=e33]:
+        - paragraph [ref=e34]: Projects
+        - heading "BidOnMyTrip" [level=1] [ref=e35]
+        - paragraph [ref=e36]: An innovative travel planning and booking platform that lets travellers post their dream vacation and have travel agents compete in real time to offer the best tailored package.
+        - generic [ref=e37]:
+          - generic [ref=e38]:
+            - generic [ref=e39]: Laravel
+            - generic [ref=e40]: Angular
+            - generic [ref=e41]: Docker
+            - generic [ref=e42]: OpenAI API
+            - generic [ref=e43]: LangChain
+            - generic [ref=e44]: Elasticsearch
+          - link "Live" [ref=e46] [cursor=pointer]:
+            - /url: https://www.bidonmytrip.com
+      - generic [ref=e47]: BidOnMyTrip revolutionises the way travellers plan and book their holidays. Instead of searching dozens of agencies, travellers post a single request and receive competing offers from professional travel agents in real time. The platform is built with Laravel and Angular and integrates Docker for containerisation, the OpenAI API and LangChain for intelligent itinerary suggestions, and Elasticsearch for fast, full-text search across destinations and packages.
+      - link "← Back to projects" [ref=e49] [cursor=pointer]:
+        - /url: http://localhost:8090/en/projects
+  - contentinfo [ref=e50]:
+    - generic [ref=e52]:
+      - generic [ref=e53]:
+        - paragraph [ref=e54]: Abdoul-Aziz ZOROM
+        - paragraph [ref=e55]: © 2026
+      - navigation "Footer navigation" [ref=e56]:
+        - link "Projects" [ref=e57] [cursor=pointer]:
+          - /url: http://localhost:8090/en/projects
+        - link "Resume" [ref=e58] [cursor=pointer]:
+          - /url: http://localhost:8090/en/resume
+        - link "Contact" [ref=e59] [cursor=pointer]:
+          - /url: http://localhost:8090/en/contact
+        - link "JSON" [ref=e60] [cursor=pointer]:
+          - /url: http://localhost:8090/en/resume/export.json

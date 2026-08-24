@@ -2,59 +2,101 @@ name: tests
 
 on:
   push:
-    branches:
-      - develop
-      - main
-      - master
-      - workos
+    branches: [main]
   pull_request:
-    branches:
-      - develop
-      - main
-      - master
-      - workos
+    branches: [main]
 
 jobs:
-  ci:
+  pest:
     runs-on: ubuntu-latest
-    environment: Testing
-    strategy:
-      matrix:
-        php-version: ['8.3', '8.4', '8.5']
+
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_DB: portfolio_test
+          POSTGRES_USER: portfolio
+          POSTGRES_PASSWORD: secret
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 5s
+          --health-timeout 3s
+          --health-retries 10
+
+      redis:
+        image: redis:7-alpine
+        ports:
+          - 6379:6379
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 5s
+          --health-timeout 3s
+          --health-retries 5
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v6
+      - uses: actions/checkout@v4
 
-      - name: Setup PHP
+      - name: Setup PHP 8.4
         uses: shivammathur/setup-php@v2
         with:
-          php-version: ${{ matrix.php-version }}
+          php-version: '8.4'
           tools: composer:v2
-          coverage: xdebug
+          extensions: pdo_pgsql, redis
+          coverage: pcov
 
-      - name: Setup Node
-        uses: actions/setup-node@v6
+      - name: Setup Node 22
+        uses: actions/setup-node@v4
         with:
           node-version: '22'
+          cache: 'npm'
 
-      - name: Install Node Dependencies
-        run: npm i
-
-      - name: Add Flux Credentials Loaded From ENV
-        run: composer config http-basic.composer.fluxui.dev "${{ secrets.FLUX_USERNAME }}" "${{ secrets.FLUX_LICENSE_KEY }}"
-
-      - name: Install Dependencies
+      - name: Install PHP dependencies
         run: composer install --no-interaction --prefer-dist --optimize-autoloader
 
-      - name: Copy Environment File
-        run: cp .env.example .env
+      - name: Install Node dependencies
+        run: npm ci
 
-      - name: Generate Application Key
-        run: php artisan key:generate
+      - name: Prepare app
+        run: |
+          cp .env.example .env
+          php artisan key:generate
+          npm run build
+        env:
+          DB_CONNECTION: pgsql
+          DB_HOST: 127.0.0.1
+          DB_PORT: 5432
+          DB_DATABASE: portfolio_test
+          DB_USERNAME: portfolio
+          DB_PASSWORD: secret
+          REDIS_HOST: 127.0.0.1
+          REDIS_PORT: 6379
+          CACHE_STORE: redis
+          SESSION_DRIVER: redis
+          QUEUE_CONNECTION: redis
 
-      - name: Build Assets
-        run: npm run build
+      - name: Run migrations
+        run: php artisan migrate --force --no-interaction
+        env:
+          DB_CONNECTION: pgsql
+          DB_HOST: 127.0.0.1
+          DB_PORT: 5432
+          DB_DATABASE: portfolio_test
+          DB_USERNAME: portfolio
+          DB_PASSWORD: secret
 
-      - name: Run Tests
-        run: ./vendor/bin/pest
+      - name: Run Pest
+        run: vendor/bin/pest --compact --coverage --min=80
+        env:
+          DB_CONNECTION: pgsql
+          DB_HOST: 127.0.0.1
+          DB_PORT: 5432
+          DB_DATABASE: portfolio_test
+          DB_USERNAME: portfolio
+          DB_PASSWORD: secret
+          REDIS_HOST: 127.0.0.1
+          REDIS_PORT: 6379
+          CACHE_STORE: redis
+          SESSION_DRIVER: redis
+          QUEUE_CONNECTION: redis

@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# Run Laravel Pint on staged PHP files before every commit.
+# Aborts the commit if Pint reports any formatting violations.
+
+set -euo pipefail
+
+# Collect staged PHP files, excluding vendor-published Flux views which use
+# intentional alternative control-structure syntax that Pint would rewrite.
+STAGED=$(git diff --cached --name-only --diff-filter=ACMR | grep '\.php$' | grep -v '^resources/views/flux/' || true)
+
+if [ -z "$STAGED" ]; then
+    exit 0
+fi
+
+if [ ! -f vendor/bin/pint ]; then
+    echo "[pre-commit] vendor/bin/pint not found — run 'composer install' first." >&2
+    exit 1
+fi
+
+echo "[pre-commit] Running Pint on staged PHP files…"
+
+# --test exits non-zero when any file needs formatting without modifying files,
+# which keeps the working tree clean and makes the failure explicit.
+vendor/bin/pint --test $STAGED
+
+echo "[pre-commit] Pint: all staged files are correctly formatted."
