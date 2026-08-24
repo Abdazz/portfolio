@@ -19,9 +19,20 @@ class EditProfile extends EditRecord
         return $this->getLocaleActions();
     }
 
+    /**
+     * This is a singleton resource: there is only ever one profile row, and its
+     * edit URL is always /admin/profiles/1/edit regardless of the row's actual
+     * id. Resolve by Profile::first() rather than a fixed id, since `id` is not
+     * fillable and a firstOrCreate(['id' => 1], ...) can't force that id via
+     * mass assignment — it would silently create a duplicate row instead.
+     */
     protected function resolveRecord(int|string $key): Model
     {
-        return Profile::firstOrCreate(['id' => 1], [
+        if ($profile = Profile::first()) {
+            return $profile;
+        }
+
+        return Profile::create([
             'full_name' => config('admin.name', 'Portfolio Admin'),
             'email' => config('admin.email', ''),
         ]);
