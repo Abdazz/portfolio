@@ -33,6 +33,10 @@ class ProfileForm
                             ->label(__('profile.fields.email')),
                         TextInput::make('phone')
                             ->tel()
+                            // Filament's default tel regex only allows parentheses immediately
+                            // around the first digit group, rejecting valid formats like
+                            // "+1 (701) 282-6972" where the country code precedes the area code.
+                            ->telRegex('/^[+]?[0-9\s().\-]{6,20}$/')
                             ->label(__('profile.fields.phone')),
                         TextInput::make('location')
                             ->columnSpanFull()
