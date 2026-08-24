@@ -1,1 +1,0 @@
-[     424ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ http://localhost:8090/en/resume/export.json:0

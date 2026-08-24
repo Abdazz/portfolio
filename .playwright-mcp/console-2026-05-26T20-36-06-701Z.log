@@ -1,2 +1,0 @@
-[     256ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ http://localhost:8090/en/resume/print:0
-[     277ms] [LOG] 🔍 Browser logger active (MCP server detected). Posting to: http://localhost:8090/_boost/browser-logs @ http://localhost:8090/en/resume/print:39
