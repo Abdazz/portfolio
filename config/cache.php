@@ -1,6 +1,12 @@
 <?php
 
+use App\Models\Profile;
+use App\Models\Project;
+use Illuminate\Support\Carbon;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
+use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 return [
 
@@ -123,8 +129,20 @@ return [
     | storage. By default, no PHP classes will be unserialized from your
     | cache to prevent gadget chain attacks if your APP_KEY is leaked.
     |
+    | The classes below are whitelisted because HomeController and
+    | ProjectsController cache Eloquent models/collections directly
+    | (home:profile, home:featured_projects, project:show:*).
+    |
     */
 
-    'serializable_classes' => false,
+    'serializable_classes' => [
+        Illuminate\Database\Eloquent\Collection::class,
+        Collection::class,
+        Carbon::class,
+        Profile::class,
+        Project::class,
+        Media::class,
+        MediaCollection::class,
+    ],
 
 ];
