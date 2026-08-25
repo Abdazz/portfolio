@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\AuditLog;
+use App\Models\Award;
 use App\Models\Experience;
 use App\Models\Skill;
 use App\Models\User;
@@ -98,6 +99,24 @@ test('audit log timestamps are excluded from the diff payload', function () {
 
     expect($log->payload['new'])->not->toHaveKey('created_at')
         ->and($log->payload['new'])->not->toHaveKey('updated_at');
+});
+
+test('creating an award writes a created audit-log entry', function () {
+    $admin = User::factory()->create();
+    $this->actingAs($admin);
+
+    $award = Award::factory()->create([
+        'issuer' => 'Acme Foundation',
+    ]);
+
+    $log = AuditLog::where('action', 'created')
+        ->where('subject_type', Award::class)
+        ->where('subject_id', $award->id)
+        ->first();
+
+    expect($log)->not->toBeNull()
+        ->and($log->user_id)->toBe($admin->id)
+        ->and($log->payload['new'])->toHaveKey('issuer', 'Acme Foundation');
 });
 
 test('a no-op update (only updated_at changes) does not write an audit-log entry', function () {

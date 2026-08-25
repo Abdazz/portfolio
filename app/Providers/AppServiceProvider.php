@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Contracts\PdfRenderer;
+use App\Models\Award;
 use App\Models\Certification;
 use App\Models\Education;
 use App\Models\Experience;
@@ -64,6 +65,10 @@ class AppServiceProvider extends ServiceProvider
 
         Profile::observe(ProfileCacheObserver::class);
         Project::observe(ProjectCacheObserver::class);
+
+        // Award is audited like every other Career-group model, but deliberately excluded
+        // from ResumeCacheObserver — it does not feed the resume/PDF pipeline.
+        Award::observe(AuditLogObserver::class);
     }
 
     /**

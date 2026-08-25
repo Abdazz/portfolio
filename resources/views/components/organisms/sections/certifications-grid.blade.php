@@ -20,11 +20,11 @@
                             @endif
                         </div>
 
-                        <h3 class="mb-1 text-base font-bold text-text">
+                        <h3 class="mb-1 text-base font-bold text-text group-hover:text-white">
                             {{ $cert->getTranslation('title', $locale) }}
                         </h3>
 
-                        <p class="mb-3 text-sm text-text-muted">
+                        <p class="mb-3 text-sm text-text-muted group-hover:text-white/70">
                             {{ $cert->issuer }}
                             @if ($cert->issued_at)
                                 &middot; {{ $cert->issued_at->translatedFormat('M Y') }}

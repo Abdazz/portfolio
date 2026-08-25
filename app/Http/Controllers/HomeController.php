@@ -29,7 +29,7 @@ class HomeController extends Controller
         $experiences = Experience::orderByDesc('start_date')->get();
         $educations = Education::orderByDesc('start_date')->get();
         $skills = Skill::orderBy('order')->get();
-        $certifications = Certification::orderByDesc('issued_at')->get();
+        $certifications = Certification::orderByDesc('issued_at')->with('media')->get();
 
         $stats = [
             'projects' => $projects->count(),
