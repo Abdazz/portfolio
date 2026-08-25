@@ -13,6 +13,23 @@ class EducationSeeder extends Seeder
 
         $entries = [
             [
+                'institution' => 'Aube Nouvelle University',
+                'degree' => [
+                    'en' => 'Master of Science in Artificial Intelligence',
+                    'fr' => 'Master en Intelligence Artificielle',
+                ],
+                'field' => [
+                    'en' => 'Artificial Intelligence',
+                    'fr' => 'Intelligence Artificielle',
+                ],
+                'start_date' => '2025-01-01',
+                'end_date' => null,
+                'description' => [
+                    'en' => 'Ongoing graduate studies in artificial intelligence, covering machine learning, agentic AI, and retrieval-augmented generation.',
+                    'fr' => 'Études supérieures en cours en intelligence artificielle, couvrant le machine learning, l\'IA agentique et la génération augmentée par récupération (RAG).',
+                ],
+            ],
+            [
                 'institution' => 'Aube Nouvelle University — Bobo-Dioulasso Campus',
                 'degree' => [
                     'en' => "Bachelor's Degree in Computer Engineering",
