@@ -62,9 +62,9 @@ it('renders the resume cta linking to the resume route', function () {
     expect($html)->toContain(route('resume'))->toContain(__('home.resume_title'));
 });
 
-it('renders the certifications marquee with each certification title', function () {
+it('renders the certifications grid with each certification title', function () {
     $certs = Certification::factory()->count(3)->create();
-    $html = Blade::render('<x-organisms.sections.certifications-marquee :certifications="$certs" />', ['certs' => $certs]);
+    $html = Blade::render('<x-organisms.sections.certifications-grid :certifications="$certs" />', ['certs' => $certs]);
 
     foreach ($certs as $cert) {
         expect($html)->toContain($cert->getTranslation('title', 'en'));
