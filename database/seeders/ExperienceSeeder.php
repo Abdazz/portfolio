@@ -26,9 +26,9 @@ class ExperienceSeeder extends Seeder
             ],
             [
                 'order' => 2,
-                'title' => ['en' => 'Consultant — Full-Stack Developer', 'fr' => 'Consultant — Développeur Full-Stack'],
-                'company' => 'Class Navigator (Netherlands)',
-                'location' => 'Remote — Netherlands',
+                'title' => ['en' => 'Consultant — Lead Full-Stack Developer', 'fr' => 'Consultant — Développeur Full-Stack Lead'],
+                'company' => 'BidOnMyTrip (United States)',
+                'location' => 'Remote — United States',
                 'start_date' => '2022-11-01',
                 'end_date' => null,
                 'description' => [
@@ -50,7 +50,7 @@ class ExperienceSeeder extends Seeder
             ],
             [
                 'order' => 4,
-                'title' => ['en' => 'Consultant — Full-Stack Developer', 'fr' => 'Consultant — Développeur Full-Stack'],
+                'title' => ['en' => 'Consultant — Lead Full-Stack Developer', 'fr' => 'Consultant — Développeur Full-Stack Lead'],
                 'company' => 'Class Navigator (Netherlands)',
                 'location' => 'Remote — Netherlands',
                 'start_date' => '2023-04-01',
@@ -86,6 +86,18 @@ class ExperienceSeeder extends Seeder
             ],
             [
                 'order' => 7,
+                'title' => ['en' => 'Invited Attendee — AfricaCom 2018', 'fr' => 'Invité — AfricaCom 2018'],
+                'company' => 'Orange',
+                'location' => 'Cape Town, South Africa',
+                'start_date' => '2018-11-01',
+                'end_date' => '2018-11-30',
+                'description' => [
+                    'en' => 'Attended AfricaCom 2018 in Cape Town by invitation from Orange — the largest gathering of technology companies on the African continent.',
+                    'fr' => 'Participation à AfricaCom 2018 au Cap, sur invitation d\'Orange — le plus grand rassemblement d\'entreprises technologiques du continent africain.',
+                ],
+            ],
+            [
+                'order' => 8,
                 'title' => ['en' => 'Founder', 'fr' => 'Fondateur'],
                 'company' => 'DigiClass',
                 'location' => 'Ouagadougou, Burkina Faso',
@@ -97,11 +109,23 @@ class ExperienceSeeder extends Seeder
                 ],
             ],
             [
-                'order' => 8,
+                'order' => 9,
+                'title' => ['en' => 'Web Developer', 'fr' => 'Développeur Web'],
+                'company' => 'DILIGO',
+                'location' => 'Ouagadougou, Burkina Faso',
+                'start_date' => '2018-02-01',
+                'end_date' => '2018-03-31',
+                'description' => [
+                    'en' => 'Developed a showcase website for the Catholic University of West Africa (UCAO). Website: http://ucao-uub.com/',
+                    'fr' => 'Développement d\'un site vitrine pour l\'Université Catholique de l\'Afrique de l\'Ouest (UCAO). Site : http://ucao-uub.com/',
+                ],
+            ],
+            [
+                'order' => 10,
                 'title' => ['en' => 'Web Developer', 'fr' => 'Développeur Web'],
                 'company' => 'Switch Maker',
                 'location' => 'Ouagadougou, Burkina Faso',
-                'start_date' => '2017-09-01',
+                'start_date' => '2017-06-01',
                 'end_date' => '2018-01-31',
                 'description' => [
                     'en' => 'Developed the governmental platform E-Compétences, a directory of IT skills of companies and consultants of Burkina Faso, for the Ministry of Digital Transition. Website: http://www.e-competences.gov.bf/',
@@ -109,7 +133,7 @@ class ExperienceSeeder extends Seeder
                 ],
             ],
             [
-                'order' => 9,
+                'order' => 11,
                 'title' => ['en' => 'Developer', 'fr' => 'Développeur'],
                 'company' => 'MyStudentWeek',
                 'location' => 'Burkina Faso',
@@ -121,15 +145,15 @@ class ExperienceSeeder extends Seeder
                 ],
             ],
             [
-                'order' => 10,
-                'title' => ['en' => 'Trainer — MS Office', 'fr' => 'Formateur — MS Office'],
-                'company' => 'Wel Multi-Services Nouna',
-                'location' => 'Nouna, Burkina Faso',
-                'start_date' => '2015-01-01',
-                'end_date' => '2016-12-31',
+                'order' => 12,
+                'title' => ['en' => 'VoIP System Implementation', 'fr' => 'Mise en place d\'un système VoIP'],
+                'company' => 'U-AUBEN',
+                'location' => 'Bobo-Dioulasso, Burkina Faso',
+                'start_date' => '2016-03-01',
+                'end_date' => '2016-05-31',
                 'description' => [
-                    'en' => 'Trained over 100 people in MS Office during the National Internet Week (NIS) 2016.',
-                    'fr' => 'Formation de plus de 100 personnes à MS Office dans le cadre de la Semaine Nationale de l\'Internet (SNI) 2016.',
+                    'en' => 'Implemented a Voice over IP (VoIP) system to make free phone calls over the network using open-source solutions, including Asterisk.',
+                    'fr' => 'Mise en place d\'un système de téléphonie sur IP (VoIP) permettant des appels gratuits sur le réseau, à l\'aide de solutions open-source dont Asterisk.',
                 ],
             ],
         ];
