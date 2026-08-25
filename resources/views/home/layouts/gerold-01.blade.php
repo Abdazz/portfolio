@@ -8,6 +8,7 @@
     <x-organisms.sections.portfolio :projects="$projects" />
     <x-organisms.sections.experience :experiences="$experiences" :educations="$educations" />
     <x-organisms.sections.skills :skills="$skills" />
+    <x-organisms.sections.certifications-grid :certifications="$certifications" />
     <x-organisms.sections.testimonials />
     <x-organisms.sections.blog />
     <x-organisms.sections.contact-cta :profile="$profile" />

@@ -5,7 +5,7 @@
 
     <x-organisms.sections.hero :profile="$profile" :stats="$stats" />
     <x-organisms.sections.contact-cta :profile="$profile" />
-    <x-organisms.sections.certifications-marquee :certifications="$certifications" />
+    <x-organisms.sections.certifications-grid :certifications="$certifications" />
     <x-organisms.sections.about :profile="$profile" :stats="$stats" />
     <x-organisms.sections.portfolio :projects="$projects" />
     <x-organisms.sections.testimonials />

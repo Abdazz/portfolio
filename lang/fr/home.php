@@ -48,6 +48,7 @@ return [
 
     // Certifications
     'certifications_title' => 'Certifications et accréditations',
+    'certifications_verify' => 'Vérifier',
 
     // Contact
     'contact_eyebrow' => 'Contact',

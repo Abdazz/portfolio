@@ -10,6 +10,6 @@
     <x-organisms.sections.resume-cta :profile="$profile" />
     <x-organisms.sections.skills :skills="$skills" />
     <x-organisms.sections.testimonials />
-    <x-organisms.sections.certifications-marquee :certifications="$certifications" />
+    <x-organisms.sections.certifications-grid :certifications="$certifications" />
     <x-organisms.sections.contact-cta :profile="$profile" />
 </x-layouts.public>

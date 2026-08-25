@@ -4,7 +4,7 @@
     </x-slot:head>
 
     <x-organisms.sections.hero :profile="$profile" :stats="$stats" />
-    <x-organisms.sections.certifications-marquee :certifications="$certifications" />
+    <x-organisms.sections.certifications-grid :certifications="$certifications" />
     <x-organisms.sections.services />
     <x-organisms.sections.portfolio :projects="$projects" />
     <x-organisms.sections.resume-cta :profile="$profile" />
