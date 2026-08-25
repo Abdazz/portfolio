@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
             EducationSeeder::class,
             SkillSeeder::class,
             CertificationSeeder::class,
+            AwardSeeder::class,
             LanguageSpokenSeeder::class,
             ProjectSeeder::class,
         ]);
