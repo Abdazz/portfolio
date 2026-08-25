@@ -42,7 +42,7 @@
     ])->filter(fn ($f) => filled($f['value']))->values();
 @endphp
 
-<section class="relative overflow-hidden pt-[130px] pb-10 md:pb-[30px] lg:pt-40 lg:pb-[50px] xl:pt-[200px] after:absolute after:top-0 after:right-0 after:-z-[1] after:-mt-[5%] after:-mr-[5%] after:h-[308px] after:w-[322px] after:rounded-full after:gradient-circle after:blur-[150px]">
+<section class="relative overflow-hidden pt-10 pb-10 md:pb-[30px] lg:pt-[70px] lg:pb-[50px] xl:pt-[110px] after:absolute after:top-0 after:right-0 after:-z-[1] after:-mt-[5%] after:-mr-[5%] after:h-[308px] after:w-[322px] after:rounded-full after:gradient-circle after:blur-[150px]">
     {{-- "HI" stroke-text watermark --}}
     <div class="intro-text" aria-hidden="true">
         <svg viewBox="0 0 1320 300" class="overflow-hidden">
